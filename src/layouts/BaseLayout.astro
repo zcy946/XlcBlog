@@ -58,25 +58,43 @@ const navigation = [{ href: '/', name: '首页' }, { href: '/writing/', name: '�
       </footer>
     </div>
     <script>
+      const root = document.documentElement;
       const button = document.querySelector<HTMLButtonElement>('.theme-toggle');
       const updateLabel = () => {
         const dark = document.documentElement.dataset.theme === 'dark';
         button?.setAttribute('aria-label', dark ? '切换到浅色主题' : '切换到深色主题');
         button?.setAttribute('title', dark ? '切换到浅色主题' : '切换到深色主题');
       };
+      const clearThemeChange = () => requestAnimationFrame(() => {
+        const changing = root.getAnimations().some(animation =>
+          animation instanceof CSSTransition && animation.transitionProperty === '--theme-progress' &&
+          (animation.playState === 'running' || animation.playState === 'paused'));
+        if (!changing) delete root.dataset.themeChanging;
+      });
+      const onThemeTransitionEnd = (event: TransitionEvent) => {
+        if (event.target === root && event.propertyName === '--theme-progress') clearThemeChange();
+      };
+      root.addEventListener('transitionend', onThemeTransitionEnd);
+      root.addEventListener('transitioncancel', onThemeTransitionEnd);
+      const applyTheme = (theme: 'light' | 'dark') => {
+        // 首屏直接呈现保存的主题，仅在用户或系统改变主题时开启渐变。
+        root.dataset.themeAnimated = '';
+        root.dataset.themeChanging = '';
+        root.dataset.theme = theme;
+        updateLabel();
+        clearThemeChange();
+      };
       if (button) {
         updateLabel();
         button.addEventListener('click', () => {
           const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-          document.documentElement.dataset.theme = next;
+          applyTheme(next);
           try { localStorage.setItem('xlc-theme', next); } catch { /* 私密模式仍可切换本页。 */ }
-          updateLabel();
         });
         button.disabled = false;
         matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
           try { if (localStorage.getItem('xlc-theme')) return; } catch { /* 继续使用系统主题。 */ }
-          document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
-          updateLabel();
+          applyTheme(event.matches ? 'dark' : 'light');
         });
       }
     </script>

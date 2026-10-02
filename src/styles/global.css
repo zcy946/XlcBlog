@@ -1,5 +1,28 @@
 @layer reset, base, components, responsive;
 
+/* 只插值一个主题进度，所有颜色（含渐变、SVG 和阴影）同步取色。 */
+@property --theme-progress {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 0%;
+}
+
+/* 让后代继承已解析的颜色，避免动画帧里边框等属性回退到 currentColor。 */
+@property --bg { syntax: '<color>'; inherits: true; initial-value: #f8f7f3; }
+@property --surface { syntax: '<color>'; inherits: true; initial-value: #f0efe8; }
+@property --text { syntax: '<color>'; inherits: true; initial-value: #292d28; }
+@property --muted { syntax: '<color>'; inherits: true; initial-value: #70736a; }
+@property --line { syntax: '<color>'; inherits: true; initial-value: #dedfd5; }
+@property --accent { syntax: '<color>'; inherits: true; initial-value: #526347; }
+@property --accent-soft { syntax: '<color>'; inherits: true; initial-value: #e8eddf; }
+@property --card-green { syntax: '<color>'; inherits: true; initial-value: #e6eadf; }
+@property --card-paper { syntax: '<color>'; inherits: true; initial-value: #ebe6dc; }
+@property --astro-code-token-constant { syntax: '<color>'; inherits: true; initial-value: #7c6546; }
+@property --astro-code-token-comment { syntax: '<color>'; inherits: true; initial-value: #686e60; }
+@property --astro-code-token-keyword { syntax: '<color>'; inherits: true; initial-value: #5b6543; }
+@property --astro-code-token-function { syntax: '<color>'; inherits: true; initial-value: #45695c; }
+@property --astro-code-token-punctuation { syntax: '<color>'; inherits: true; initial-value: #686e60; }
+
 @layer reset {
   *, *::before, *::after { box-sizing: border-box; }
   body, h1, h2, h3, p { margin: 0; }
@@ -14,25 +37,26 @@
 @layer base {
   :root {
     color-scheme: light;
-    --bg: #f8f7f3;
-    --surface: #f0efe8;
-    --text: #292d28;
-    --muted: #70736a;
-    --line: #dedfd5;
-    --accent: #526347;
-    --accent-soft: #e8eddf;
-    --card-green: #e6eadf;
-    --card-paper: #ebe6dc;
+    --theme-progress: 0%;
+    --bg: color-mix(in srgb, #f8f7f3, #1c211c var(--theme-progress));
+    --surface: color-mix(in srgb, #f0efe8, #252b24 var(--theme-progress));
+    --text: color-mix(in srgb, #292d28, #eceee4 var(--theme-progress));
+    --muted: color-mix(in srgb, #70736a, #adb3a4 var(--theme-progress));
+    --line: color-mix(in srgb, #dedfd5, #3a4237 var(--theme-progress));
+    --accent: color-mix(in srgb, #526347, #b5c79d var(--theme-progress));
+    --accent-soft: color-mix(in srgb, #e8eddf, #323f2d var(--theme-progress));
+    --card-green: color-mix(in srgb, #e6eadf, #354130 var(--theme-progress));
+    --card-paper: color-mix(in srgb, #ebe6dc, #423e32 var(--theme-progress));
     --astro-code-foreground: var(--text);
     --astro-code-background: var(--surface);
-    --astro-code-token-constant: #7c6546;
+    --astro-code-token-constant: color-mix(in srgb, #7c6546, #c8b18b var(--theme-progress));
     --astro-code-token-string: var(--accent);
-    --astro-code-token-comment: #686e60;
-    --astro-code-token-keyword: #5b6543;
+    --astro-code-token-comment: color-mix(in srgb, #686e60, #929c87 var(--theme-progress));
+    --astro-code-token-keyword: color-mix(in srgb, #5b6543, #c1caa4 var(--theme-progress));
     --astro-code-token-parameter: var(--text);
-    --astro-code-token-function: #45695c;
+    --astro-code-token-function: color-mix(in srgb, #45695c, #a2c0af var(--theme-progress));
     --astro-code-token-string-expression: var(--accent);
-    --astro-code-token-punctuation: #686e60;
+    --astro-code-token-punctuation: color-mix(in srgb, #686e60, #adb3a4 var(--theme-progress));
     --astro-code-token-link: var(--accent);
     --serif: "Palatino Linotype", "Book Antiqua", "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -40,22 +64,12 @@
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --bg: #1c211c;
-    --surface: #252b24;
-    --text: #eceee4;
-    --muted: #adb3a4;
-    --line: #3a4237;
-    --accent: #b5c79d;
-    --accent-soft: #323f2d;
-    --card-green: #354130;
-    --card-paper: #423e32;
-    --astro-code-token-constant: #c8b18b;
-    --astro-code-token-comment: #929c87;
-    --astro-code-token-keyword: #c1caa4;
-    --astro-code-token-function: #a2c0af;
-    --astro-code-token-punctuation: var(--muted);
+    --theme-progress: 100%;
   }
-  html { scroll-behavior: smooth; scroll-padding-top: 32px; scrollbar-gutter: stable; }
+  @media (prefers-reduced-motion: no-preference) {
+    :root[data-theme-animated] { transition: --theme-progress 320ms ease-in-out; }
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 32px; scrollbar-gutter: stable; scrollbar-color: var(--muted) var(--bg); }
   body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
   ::selection { background: var(--accent-soft); color: var(--text); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
@@ -75,6 +89,8 @@
   .text-link:hover svg { transform: translateX(3px); }
   .button-link { display: inline-flex; justify-content: center; align-items: center; gap: 22px; padding: 12px 20px; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); font-size: 13px; border-radius: 3px; transition: background .2s, color .2s; }
   .button-link:hover { background: transparent; color: var(--accent); }
+  /* 主题调色期间避免悬停过渡再次插值，完成后恢复原有悬停效果。 */
+  :root[data-theme-changing] .button-link { transition: none; }
 }
 
 @layer components {
