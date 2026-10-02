@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile } from '../data/site';
+---
+<BaseLayout title="关于" description={profile.description}>
+  <div class="about-page"><header class="page-heading"><p class="eyebrow">A LITTLE ABOUT ME</p><h1>你好，我是 {profile.name}<span>.</span></h1><p>{profile.note}</p></header><div class="about-layout"><div class="about-monogram" aria-hidden="true"><span>xlc.</span><small>THINK. MAKE. REPEAT.</small></div><div class="prose"><p class="lead">{profile.introduction}</p><h2>这个空间里有什么</h2><p>这里既是一个写作的地方，也是一个小小的作品集。文章记录思考的过程，项目留存动手的结果。比起完成得很快，更希望它们可以慢慢变得清晰、有用。</p><h2>一些在意的事</h2><ul><li>清晰地表达，让复杂的事情更容易理解。</li><li>认真地构建，从一个小而具体的问题开始。</li><li>保留好奇心，为尚未了解的事物留一点空间。</li></ul><h2>关于这个博客</h2><p>一个以阅读为中心的静态网站。用文字、留白和少量色彩，让内容有自己的呼吸节奏。你可以从<a href="/writing/">一篇文章</a>开始，也可以看看<a href="/projects/">正在构建的项目</a>。</p>{profile.sample && <p class="sample-notice">当前个人介绍为示例文案，等待替换为真实资料。</p>}{(profile.email || profile.github) && <section><h2>保持联系</h2>{profile.email && <p><a href={`mailto:${profile.email}`}>{profile.email}</a></p>}{profile.github && <p><a href={profile.github} target="_blank" rel="noopener noreferrer">在 GitHub 找到我 ↗</a></p>}</section>}</div></div></div>
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+import { profile } from '../data/site';
+interface Props { title?: string; description?: string; article?: boolean; }
+const { title, description = profile.description, article = false } = Astro.props;
+const pageTitle = title ? `${title} · ${profile.name}` : profile.title;
+const path = Astro.url.pathname;
+const canonical = Astro.site ? new URL(path, Astro.site).href : undefined;
+const navigation = [{ href: '/', name: '首页' }, { href: '/writing/', name: '文章' }, { href: '/projects/', name: '项目' }, { href: '/about/', name: '关于' }];
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f8f7f3" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:locale" content="zh_CN" />
+    {canonical && <><link rel="canonical" href={canonical} /><meta property="og:url" content={canonical} /></>}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem('xlc-theme');
+        document.documentElement.dataset.theme = saved === 'light' || saved === 'dark' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch { document.documentElement.dataset.theme = 'light'; }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳转到正文</a>
+    <div class="site-shell" id="top">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label={`${profile.name} 首页`}>xlc<span>.</span></a>
+        <div class="header-right">
+          <nav aria-label="主导航">{navigation.map(item => <a href={item.href} aria-current={(item.href === '/' ? path === '/' : path.startsWith(item.href)) ? 'page' : undefined}>{item.name}</a>)}</nav>
+          <span class="nav-divider" aria-hidden="true"></span>
+          <button class="theme-toggle" type="button" aria-label="切换深浅主题" title="切换深浅主题" hidden>
+            <svg class="moon-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.4 14A8.5 8.5 0 0 1 10 3.6 8.5 8.5 0 1 0 20.4 14Z" /></svg>
+            <svg class="sun-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          </button>
+        </div>
+      </header>
+      <main id="main" tabindex="-1"><slot /></main>
+      <footer class="site-footer">
+        <div><a class="brand footer-brand" href="/">xlc<span>.</span></a><p>保持好奇，慢慢构建。</p></div>
+        <div class="footer-right"><div class="footer-links">{profile.github && <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>}{profile.email && <a href={`mailto:${profile.email}`}>联系我 ↗</a>}<a href="/about/">关于这个空间 ↗</a><a href="#top">回到顶部 ↑</a></div><small>© {new Date().getUTCFullYear()} {profile.name} · Built with care & Astro</small></div>
+      </footer>
+    </div>
+    <script>
+      const button = document.querySelector<HTMLButtonElement>('.theme-toggle');
+      const updateLabel = () => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        button?.setAttribute('aria-label', dark ? '切换到浅色主题' : '切换到深色主题');
+        button?.setAttribute('title', dark ? '切换到浅色主题' : '切换到深色主题');
+      };
+      if (button) {
+        button.hidden = false;
+        updateLabel();
+        button.addEventListener('click', () => {
+          const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          try { localStorage.setItem('xlc-theme', next); } catch { /* 私密模式仍可切换本页。 */ }
+          updateLabel();
+        });
+        matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+          try { if (localStorage.getItem('xlc-theme')) return; } catch { /* 继续使用系统主题。 */ }
+          document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
+          updateLabel();
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { projects } from '../../data/site';
+---
+<BaseLayout title="项目" description="把好奇心和想法，做成可以触摸的作品。">
+  <header class="page-heading"><p class="eyebrow">THE WORKSHOP</p><h1>从想法，到作品<span>.</span></h1><p>一些小小的构建，一些认真的尝试。持续更新，也持续打磨。</p></header>
+  <div class="project-grid projects-page">{projects.map(project => <ProjectCard project={project} />)}</div>
+  <p class="archive-end">小步构建，慢慢生长。</p>
+</BaseLayout>

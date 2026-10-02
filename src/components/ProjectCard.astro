@@ -1,0 +1,24 @@
+---
+import type { Project } from '../data/site';
+import Arrow from './Arrow.astro';
+interface Props { project: Project; }
+const { project } = Astro.props;
+---
+<a class="project-card" href={`/projects/${project.slug}/`}>
+  <div class:list={['project-visual', project.visual]} aria-hidden="true">
+    <span class="visual-caption">{project.visual === 'journal' ? 'A PERSONAL CORNER OF THE WEB' : 'COLLECT WORDS. CONNECT IDEAS.'}</span>
+    {project.visual === 'journal' ? (
+      <div class="mini-browser">
+        <div class="mini-top"><span>xlc<span class="mini-dot">.</span></span><span>思考 / 作品 / 日常</span></div>
+        <div class="mini-content"><span>HELLO, WORLD.</span><strong>记录思考，<br />构建想法。</strong><div class="mini-line"></div><div class="mini-line short"></div></div>
+        <div class="mini-star">✳</div>
+      </div>
+    ) : (
+      <div class="book-composition"><div class="book-shadow"></div><div class="book-cover"><span>READING NOTES / VOL. 01</span><strong>拾<br />页<span>。</span></strong><span>在字里行间，遇见新的自己。</span></div><div class="book-note">读有所思。<br /><span>think between the lines.</span></div></div>
+    )}
+    <span class="visual-number">{project.number} / SELECTED WORK</span>
+  </div>
+  <div class="project-card-heading"><h3>{project.name}</h3><span class="project-status">{project.status}</span><Arrow diagonal /></div>
+  <p>{project.description}</p>
+  <div class="tags">{project.tags.map(tag => <span>{tag}</span>)}</div>
+</a>

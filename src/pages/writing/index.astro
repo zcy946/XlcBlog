@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostRow from '../../components/PostRow.astro';
+import { getPosts } from '../../lib/posts';
+const posts = await getPosts();
+const categories = [...new Set(posts.map(post => post.data.category))];
+---
+<BaseLayout title="文章" description="关于技术、设计与日常的观察和记录。">
+  <header class="page-heading"><p class="eyebrow">THE JOURNAL</p><h1>思考的痕迹<span>.</span></h1><p>记录学到的东西，也记录还没想明白的问题。</p></header>
+  <div class="writing-tools" hidden>
+    <div class="category-filters" role="group" aria-label="按文章分类筛选"><button type="button" data-filter="all" aria-pressed="true">全部 <span>{posts.length}</span></button>{categories.map(category => <button type="button" data-filter={category} aria-pressed="false">{category}</button>)}</div>
+    <label class="search-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><span class="sr-only">搜索文章</span><input type="search" id="post-search" placeholder="找一篇文章…" autocomplete="off" /></label>
+  </div>
+  <p id="search-count" class="search-count" role="status" aria-live="polite" hidden></p>
+  <div class="post-list archive-list">{posts.map(post => <PostRow post={post} />)}</div>
+  <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">↳</span><h2>还没有找到这篇文章</h2><p>试试其他关键词，或看看全部文章。</p><button class="button-link" id="reset-search" type="button">清除筛选</button></div>
+  <p class="archive-end">{posts.length} 篇记录 · 文字还会继续生长</p>
+  <script>
+    const controls = document.querySelector<HTMLElement>('.writing-tools');
+    const input = document.querySelector<HTMLInputElement>('#post-search');
+    const buttons = [...document.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+    const rows = [...document.querySelectorAll<HTMLElement>('.post-row')];
+    const count = document.querySelector<HTMLElement>('#search-count');
+    const empty = document.querySelector<HTMLElement>('#empty-state');
+    let selected = 'all';
+    function filter() {
+      const query = input?.value.trim().toLocaleLowerCase() ?? '';
+      let visible = 0;
+      for (const row of rows) {
+        const matches = (selected === 'all' || row.dataset.category === selected) && (row.dataset.search ?? '').includes(query);
+        row.hidden = !matches;
+        if (matches) visible++;
+      }
+      if (count) { count.hidden = false; count.textContent = `显示 ${visible} 篇文章`; }
+      if (empty) empty.hidden = visible !== 0;
+      buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === selected)));
+    }
+    if (controls) controls.hidden = false;
+    input?.addEventListener('input', filter);
+    buttons.forEach(button => button.addEventListener('click', () => { selected = button.dataset.filter ?? 'all'; filter(); }));
+    document.querySelector('#reset-search')?.addEventListener('click', () => { selected = 'all'; if (input) input.value = ''; filter(); input?.focus(); });
+  </script>
+</BaseLayout>

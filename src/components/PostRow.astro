@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate, readingMinutes } from '../lib/posts';
+import Arrow from './Arrow.astro';
+interface Props { post: CollectionEntry<'posts'>; }
+const { post } = Astro.props;
+---
+<article class="post-row" data-category={post.data.category} data-search={[post.data.title, post.data.description, ...post.data.tags].join(' ').toLowerCase()}>
+  <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+  <div class="post-row-content">
+    <div class="post-meta"><span>{post.data.category}</span><span>·</span><span>{readingMinutes(post.body)} 分钟阅读</span>{post.data.sample && <span class="sample-label">示例</span>}</div>
+    <h3><a href={`/writing/${post.id}/`}>{post.data.title}<Arrow /></a></h3>
+    <p>{post.data.description}</p>
+  </div>
+</article>
