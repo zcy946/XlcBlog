@@ -60,7 +60,21 @@ sample: false
 
 `draft: true` 的文章不会出现在首页、文章列表或静态详情页。发布时改为 `false`。发布日期仅用于显示和排序，不提供定时发布。文章目录从二级标题自动生成。搜索在浏览器中匹配标题、摘要和标签，不搜索全文。
 
-## 部署到自己的服务器
+## 部署到 Cloudflare Pages（当前生产环境）
+
+- 正式地址：`https://1610161.xyz`
+- Pages 项目：`xlc-blog`，默认地址：`https://xlc-blog.pages.dev`
+- GitHub 仓库：`zcy946/XlcBlog`，生产分支：`main`
+- 构建命令：`npm run build`，输出目录：`dist`，根目录为仓库根目录。
+- 构建环境变量：`SITE_URL=https://1610161.xyz`、`NODE_VERSION=24.18.0`。
+
+以上设置位于 Cloudflare Pages 项目配置中。推送到 GitHub 的 `main` 分支会自动构建并发布；本地尚未提交、推送的修改不会上线。可在 Pages 的 Deployments 中检查构建日志及部署状态。
+
+网站为纯静态页面，不需要 Cloudflare 运行时适配器、数据库、R2 存储桶或腾讯云服务器。图片可放入 `public/`，随网站一起发布。
+
+更换域名时，同时调整 Pages 的 Custom domains、Cloudflare DNS 和构建环境变量 `SITE_URL`，然后重新部署，使 canonical 和 Open Graph URL 使用新域名。
+
+## 部署到自己的服务器（可选）
 
 网站不需要常驻 Node.js 或数据库。服务器只需提供 `dist/` 内的静态文件。
 
@@ -98,4 +112,4 @@ sample: false
 - 正文支持 Markdown 引用、列表、表格和代码高亮。
 - 提供跳转到正文、可见键盘焦点和减少动态效果支持。
 
-目前尚未接入评论、全文检索、RSS、统计或自动部署。
+目前尚未接入评论、全文检索、RSS 或统计；生产环境使用 Cloudflare Pages 的 Git 自动部署。
