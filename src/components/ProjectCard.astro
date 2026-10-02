@@ -1,24 +1,32 @@
 ---
 import type { Project } from '../data/site';
 import Arrow from './Arrow.astro';
+import ProjectName from './ProjectName.astro';
 interface Props { project: Project; }
 const { project } = Astro.props;
 ---
 <a class="project-card" href={`/projects/${project.slug}/`}>
   <div class:list={['project-visual', project.visual]} aria-hidden="true">
-    <span class="visual-caption">{project.visual === 'journal' ? 'A PERSONAL CORNER OF THE WEB' : 'COLLECT WORDS. CONNECT IDEAS.'}</span>
+    <span class="visual-caption">{project.visualCaption}</span>
     {project.visual === 'journal' ? (
       <div class="mini-browser">
         <div class="mini-top"><span>xlc<span class="mini-dot">.</span></span><span>思考 / 作品 / 日常</span></div>
         <div class="mini-content"><span>HELLO, WORLD.</span><strong>记录思考，<br />构建想法。</strong><div class="mini-line"></div><div class="mini-line short"></div></div>
         <div class="mini-star">✳</div>
       </div>
+    ) : project.visual === 'widgets' ? (
+      <div class="widget-preview">
+        <div class="preview-window-bar"><span></span><span></span><span></span><strong>Qlementine</strong></div>
+        <div class="widget-preview-body"><span class="preview-label">A LITTLE MORE REFINED.</span><div class="preview-button-row"><span class="preview-primary">Button</span><span class="preview-secondary">Button</span></div><div class="preview-slider"><span></span></div><div class="preview-control-row"><span class="preview-switch"></span><span class="preview-checkbox">✓</span><span class="preview-radio"></span></div></div>
+      </div>
+    ) : project.visual === 'scaffold' ? (
+      <div class="forge-preview"><div class="preview-window-bar"><span></span><span></span><span></span><strong>QtForge</strong></div><div class="forge-preview-body"><span class="preview-label">BUILD SOMETHING OF YOUR OWN.</span><div class="forge-tree"><span>examples/</span><span>libs/</span><span class="tree-child">XlcLogger</span><span class="tree-child">XlcLogWidget</span></div><div class="forge-log"><span>INFO</span> Ready to build<span class="terminal-cursor"></span></div></div></div>
     ) : (
-      <div class="book-composition"><div class="book-shadow"></div><div class="book-cover"><span>READING NOTES / VOL. 01</span><strong>拾<br />页<span>。</span></strong><span>在字里行间，遇见新的自己。</span></div><div class="book-note">读有所思。<br /><span>think between the lines.</span></div></div>
+      <div class="loading-preview"><div class="loading-indicators"><svg viewBox="0 0 80 80" class="dot-indicator" fill="currentColor">{Array.from({length: 8}, (_, index) => <circle cx="40" cy="11" r="3.6" transform={`rotate(${index * 45} 40 40)`} opacity={0.18 + index * 0.11} />)}</svg><svg viewBox="0 0 80 80" class="moon-indicator" fill="none"><circle cx="40" cy="40" r="28" stroke="currentColor" stroke-width="3" opacity=".16"/><path d="M40 12a28 28 0 0 1 28 28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div><div class="loading-variant-labels"><span>DOT</span><span>MOON</span></div><span class="loading-caption">A MOMENT, PLEASE.</span></div>
     )}
     <span class="visual-number">{project.number} / SELECTED WORK</span>
   </div>
-  <div class="project-card-heading"><h3>{project.name}</h3><span class="project-status">{project.status}</span><Arrow diagonal /></div>
+  <div class="project-card-heading"><h3><ProjectName name={project.name} /></h3><Arrow diagonal /><span class="project-status">{project.status}</span></div>
   <p>{project.description}</p>
   <div class="tags">{project.tags.map(tag => <span>{tag}</span>)}</div>
 </a>

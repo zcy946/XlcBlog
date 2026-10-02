@@ -1,12 +1,26 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Arrow from '../../components/Arrow.astro';
+import ProjectName from '../../components/ProjectName.astro';
 import { projects } from '../../data/site';
 export function getStaticPaths() {
   return projects.map(project => ({ params: { slug: project.slug }, props: { project } }));
 }
 const { project } = Astro.props;
+const external = project.url?.startsWith('https://');
 ---
 <BaseLayout title={project.name} description={project.description}>
-  <article class="project-detail"><header class="article-header"><a class="back-link" href="/projects/">← 全部项目</a><p class="eyebrow">PROJECT {project.number} / {project.status}</p><h1>{project.name}<span>.</span></h1><p class="article-description">{project.subtitle}</p><div class="tags">{project.tags.map(tag => <span>{tag}</span>)}</div>{project.sample && <p class="sample-notice">这是用于展示页面的示例项目。</p>}</header><div class="prose">{project.paragraphs.map(paragraph => <section><h2>{paragraph.title}</h2><p>{paragraph.text}</p></section>)}</div>{project.url && <a class="button-link project-visit" href={project.url}>访问项目 <Arrow diagonal /></a>}</article>
+  <article class="project-detail">
+    <header class="article-header">
+      <a class="back-link" href="/projects/">← 全部项目</a>
+      <p class="eyebrow">PROJECT {project.number} / {project.status}</p>
+      <h1><ProjectName name={project.name} /><span>.</span></h1>
+      <p class="article-description">{project.subtitle}</p>
+      <div class="tags">{project.tags.map(tag => <span>{tag}</span>)}</div>
+      {project.url && <a class="button-link project-visit" href={project.url} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>{external ? '在 GitHub 查看' : '访问项目'} <Arrow diagonal />{external && <span class="sr-only">（新窗口打开）</span>}</a>}
+      {project.sample && <p class="sample-notice">这是用于展示页面的示例项目。</p>}
+    </header>
+    <div class="prose">{project.paragraphs.map(paragraph => <section><h2>{paragraph.title}</h2><p>{paragraph.text}</p></section>)}</div>
+    {project.source && <p class="project-source">上游项目：<a href={project.source.url} target="_blank" rel="noopener noreferrer">{project.source.label} ↗<span class="sr-only">（新窗口打开）</span></a></p>}
+  </article>
 </BaseLayout>

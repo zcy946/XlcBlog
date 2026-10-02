@@ -7,6 +7,7 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   markdown: {
-    shikiConfig: { themes: { light: 'github-light', dark: 'github-dark' } },
+    // 让语法高亮跟随站点的 CSS 颜色变量，统一深浅主题。
+    shikiConfig: { theme: 'css-variables' },
   },
 });

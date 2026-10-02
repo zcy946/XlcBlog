@@ -30,7 +30,13 @@ npm run preview
 - `src/styles/global.css`：颜色变量、字体、间距、响应式布局。
 - `public/favicon.svg`：站点图标。
 
-当前个人介绍和三篇文章为示例，第二个项目“拾页”为概念占位，不代表真实经历或已发布产品。替换真实内容后，把相应 `sample` 设为 `false`。第一个项目介绍本网站本身。
+当前个人介绍和三篇文章仍含示例文案；替换真实内容后，把相应 `sample` 设为 `false`。
+
+首页展示三个 `featured: true` 的 GitHub 项目，项目列表同时保留 XlcBlog 本站。项目介绍根据下列仓库的 README 与公开实现手动整理，构建和访问网站均不依赖 GitHub API；仓库功能变化后需更新 `src/data/site.ts`。封面为本站绘制的主题示意，并非产品截图。
+
+- [qlementine](https://github.com/zcy946/qlementine)：面向 Qt5 的现代 QStyle 分支；详情页保留 [oclero/qlementine](https://github.com/oclero/qlementine) 和 Olivier Cléro 的上游署名。
+- [QtForge](https://github.com/zcy946/QtForge)：CMake、Qt5 Widgets、C++17 应用脚手架，集成 XlcLogger 与 XlcLogWidget。
+- [XLCCircularLoadingIndicator](https://github.com/zcy946/XLCCircularLoadingIndicator)：Qt5 环形加载组件，支持 Dot 与 Moon 样式。
 
 新文章示例：
 
@@ -86,6 +92,7 @@ sample: false
 
 - 系统字体，无外部字体、图片或跟踪脚本请求。
 - 深浅主题首次跟随系统，手动选择保存在本地浏览器。
+- 正文使用 180 毫秒的淡入与轻微上移动画，直接作用于真实内容，期间仍可点击导航、文章和项目；主题背景与导航不参与动画。首屏内联背景样式避免样式资源加载时露出白底；系统设置为减少动态效果时关闭动画。动画样式在 `src/styles/page-transitions.css` 中调整，无需额外脚本。
 - 搜索与分类组合筛选，并提供无结果状态、清除按钮和屏幕阅读器结果提示。
 - 禁用 JavaScript 时仍可阅读、导航；搜索和主题按钮隐藏。
 - 正文支持 Markdown 引用、列表、表格和代码高亮。

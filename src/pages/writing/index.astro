@@ -7,7 +7,7 @@ const categories = [...new Set(posts.map(post => post.data.category))];
 ---
 <BaseLayout title="文章" description="关于技术、设计与日常的观察和记录。">
   <header class="page-heading"><p class="eyebrow">THE JOURNAL</p><h1>思考的痕迹<span>.</span></h1><p>记录学到的东西，也记录还没想明白的问题。</p></header>
-  <div class="writing-tools" hidden>
+  <div class="writing-tools" inert>
     <div class="category-filters" role="group" aria-label="按文章分类筛选"><button type="button" data-filter="all" aria-pressed="true">全部 <span>{posts.length}</span></button>{categories.map(category => <button type="button" data-filter={category} aria-pressed="false">{category}</button>)}</div>
     <label class="search-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><span class="sr-only">搜索文章</span><input type="search" id="post-search" placeholder="找一篇文章…" autocomplete="off" /></label>
   </div>
@@ -35,9 +35,9 @@ const categories = [...new Set(posts.map(post => post.data.category))];
       if (empty) empty.hidden = visible !== 0;
       buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === selected)));
     }
-    if (controls) controls.hidden = false;
     input?.addEventListener('input', filter);
     buttons.forEach(button => button.addEventListener('click', () => { selected = button.dataset.filter ?? 'all'; filter(); }));
     document.querySelector('#reset-search')?.addEventListener('click', () => { selected = 'all'; if (input) input.value = ''; filter(); input?.focus(); });
+    if (controls) controls.inert = false;
   </script>
 </BaseLayout>

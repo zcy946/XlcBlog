@@ -1,0 +1,9 @@
+/* 直接动画化真实正文，导航和背景保持稳定，切页不等待动画结束。 */
+@media (prefers-reduced-motion: no-preference) {
+  #main { animation: page-enter 180ms ease-out; }
+}
+
+@keyframes page-enter {
+  from { opacity: .65; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
