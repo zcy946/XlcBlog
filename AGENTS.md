@@ -1,0 +1,5 @@
+# Agent 编码指引
+
+本指引适用于整个仓库。
+
+- 创建 Git 提交时，必须遵循《约定式提交规范》（Conventional Commits）；提交标题使用 `<type>[可选 scope][可选 !]: <中文描述>` 格式，例如 `fix(button): 修复禁用状态下仍响应点击的问题`。保留 `feat`、`fix` 等类型及 `BREAKING CHANGE` 等规范标记，描述和正文使用简体中文。
