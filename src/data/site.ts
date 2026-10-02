@@ -100,11 +100,11 @@ export const projects: Project[] = [
     featured: false,
     status: '持续构建',
     sample: false,
-    url: '/',
+    url: 'https://github.com/zcy946/XlcBlog',
     paragraphs: [
       { title: '从一个自己的空间开始', text: '这个网站将个人介绍、项目和文章放在一起。首页负责介绍，文章页留给阅读，项目页记录从想法到实现的过程。' },
       { title: '让内容成为主角', text: '暖白底色、清晰的字号层级和适度留白构成页面的基础。文字保持舒适的行宽，导航和交互保持简单，同时适配手机和深色阅读环境。' },
-      { title: '构建与维护', text: '网站使用 Astro 生成静态页面，文章使用 Markdown 管理。构建产物可以直接部署在自己的服务器上，个人资料和项目资料在配置文件中集中维护。' },
+      { title: '构建与维护', text: '网站使用 Astro 生成静态页面，文章使用 Markdown 管理。构建产物可以直接部署在自己的服务器上，个人资料和项目资料在配置文件中集中维护。源码托管于 GitHub 的 zcy946/XlcBlog 仓库，可通过上方入口查看源码，以及 README 中的本地开发、内容维护和服务器部署说明。' },
     ],
   },
 ];
