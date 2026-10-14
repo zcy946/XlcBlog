@@ -60,6 +60,28 @@ sample: false
 
 `draft: true` 的文章不会出现在首页、文章列表或静态详情页。发布时改为 `false`。发布日期仅用于显示和排序，不提供定时发布。文章目录从二至四级标题自动生成。搜索在浏览器中匹配标题、摘要和标签，不搜索全文。
 
+### 早报版式
+
+在 frontmatter 中设置 `format: briefing` 可使用早报版式；不填写时默认为普通文章。样式位于 `src/styles/briefing.css`。可直接复制 [早报排版样例](templates/briefing.md)，实际效果见 [2026-10-14 南沙早报](src/content/posts/nansha-morning-2026-10-14.md)。
+
+样例放在 `templates/`，不会被收录为文章。创建新一期时复制到文章目录，例如：
+
+```powershell
+Copy-Item -LiteralPath templates/briefing.md -Destination src/content/posts/nansha-morning-2026-10-15.md
+```
+
+1. 修改 frontmatter 的标题、摘要、日期和标签；保留 `format: briefing`。
+2. 替换全部“示例”文案、`【填写项】`、2000 年的日期及 `example.com` 链接。样例覆盖完整公告、四级小节、短公告、无新增类别、近期摘要和截止提醒，可按需复制或删除整个区块。
+3. 同步本期总数、分类数量、近期公告数量及提醒涉及的事项数。某分类有新增公告时，移除导航的 `is-empty`，将 `briefing-empty` 区块换成普通分类标题和公告。
+4. 核对重点日期、分类导航和正文标题的锚点链接。Markdown 标题自动生成锚点，例如 `### 2000年1月2日18:00` 对应 `#2000年1月2日1800`；修改标题或日期后同步更新 `href`，不要使用重复标题。
+5. 样例默认 `draft: true`、`sample: true`。准备预览时将 `draft` 改为 `false`，启动 `npm run dev`，打开 `/writing/文件名/`（不含 `.md`）；确认内容完整后再将 `sample` 改为 `false`，执行 `npm run build`。草稿不会生成详情页，`sample` 仅控制示例标记，不控制是否发布。
+
+早报使用 Markdown。用 `<section class="briefing-item">` 包住单条公告，保留三级 Markdown 标题，依次放置发布日期（`briefing-meta`）、摘要（`briefing-summary`）、键值事项（`dl.briefing-facts`）、背景说明、来源（`footer.briefing-source`）。没有键值事项的短公告可加 `briefing-item--brief`。HTML 包装标签与 Markdown 内容之间留一行空白，标题才能正常解析并进入目录。
+
+顶部使用 `briefing-overview` 和 `briefing-categories` 提供重点日期与分类锚点；`briefing-empty` 用于本期无新增的类别，`briefing-digest` 用于近期公告，`briefing-deadline` 用于按日期排列的提醒。日期使用明确的年月日，不使用随访问时间变化的“明天”或倒计时。复制示例时同步更新分类数量、锚点链接和提醒。
+
+阅读时长忽略 HTML 包装、注释和 Markdown 链接地址。若文章带有 `nansha-report-metadata`，修改内容后应更新其中的 `report_body_sha256`：取该注释开始之前的全部 UTF-8 内容（包含 frontmatter 和空行）计算 SHA-256，保留来源核验记录。
+
 ## 部署到 Cloudflare Pages（当前生产环境）
 
 - 正式地址：`https://1610161.xyz`

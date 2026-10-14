@@ -3,184 +3,359 @@ title: '南沙区政府早报｜2026-10-14'
 description: '关注先进制造业企业税收优惠申报、东涌窗口服务采购、民政服务询价与研究成果征集，附近期公告和重要截止提醒。'
 date: 2026-10-14
 category: '南沙区政府早报'
+format: briefing
 tags: ['南沙', '政府公告', '早报']
 draft: false
 sample: false
 ---
 
-2026年10月14日，星期三。本期汇总10月13日至14日发布的公告，并附近期事项及截止提醒。以下时间均为北京时间。
+<p class="briefing-intro">2026年10月14日，星期三。本期汇总10月13日至14日发布的公告，并附近期事项及截止提醒。以下时间均为北京时间。</p>
+
+<section class="briefing-overview">
 
 ## 今日先看
 
-本期收录 **10条公告**，涵盖先进制造业企业税收优惠名单申报、3项招标或询价、1项中标结果、研究成果征集及4项行政文书。**10月15日有两项土地公示届满；两项民政询价均须于10月19日18:00前送达材料。**
+本期收录 **10条公告**，涵盖先进制造业企业税收优惠名单申报、3项招标或询价、1项中标结果、研究成果征集及4项行政文书。
+
+<div class="briefing-priorities">
+  <a href="#10月15日届满的两项土地公示"><span>10月15日</span><strong>两项土地公示届满</strong></a>
+  <a href="#10月19日1800"><span>10月19日 · 18:00前</span><strong>两项民政询价材料送达截止</strong></a>
+</div>
+
+</section>
+
+<section class="briefing-categories">
 
 ## 分类速览
 
-| 分类 | 本期公告 |
-| --- | ---: |
-| 政策及涉企 | 1 |
-| 土地规划及建设 | 0 |
-| 招投标及采购 | 4 |
-| 民生招聘及公共服务 | 0 |
-| 其他 | 5 |
-| **合计** | **10** |
+<nav aria-label="按公告分类跳转">
+  <a href="#政策及涉企">政策及涉企 <span>1</span></a>
+  <a href="#招投标及采购">招投标及采购 <span>4</span></a>
+  <a href="#其他">其他 <span>5</span></a>
+  <a href="#土地规划及建设" class="is-empty">土地规划及建设 <span>0</span></a>
+  <a href="#民生招聘及公共服务" class="is-empty">民生招聘及公共服务 <span>0</span></a>
+</nav>
 
-另附10月12日的10条近期公告，以及11项办理和截止提醒。
+合计10条。另附10月12日的10条近期公告，以及11项办理和截止提醒。
+
+</section>
 
 ## 政策及涉企
 
+<section class="briefing-item">
+
 ### 01｜先进制造业企业增值税加计抵减名单申报
 
-**官方原标题：** 广州市南沙区工业和信息化局转发关于开展2026年度享受增值税加计抵减政策的先进制造业企业名单制定工作的通知  
-**状态：** 新发布 · **发布日期：** 2026-10-13 · **发布机关：** 广州市南沙区工业和信息化局
+<p class="briefing-meta">新发布 · <time datetime="2026-10-13">2026-10-13</time></p>
 
-**一句话看懂：符合条件的先进制造业企业应按月度窗口申报2026年度名单，网上提交签章材料，无需纸质报送。**
+<div class="briefing-summary">
+
+符合条件的先进制造业企业应**按月度窗口申报2026年度名单**，网上提交签章材料，**无需纸质报送**。
+
+</div>
+
+<dl class="briefing-facts">
+  <div><dt>原名单企业</dt><dd>已进入2025年度名单、当前高企资格仍有效的企业，自2026年9月起每月1日至10日提交</dd></div>
+  <div><dt>新申请企业</dt><dd>自2026年10月起每月1日至10日提交</dd></div>
+  <div><dt>总截止日</dt><dd>2027年4月10日；按通知窗口，下一个月度提交时段为2026年11月1日至10日</dd></div>
+</dl>
 
 区工信局转发市级名单制定通知，组织符合条件的企业申报。附件明确，相关先进制造业企业是高新技术企业中的制造业一般纳税人；是否进入名单及享受政策，仍须按官方条件审核，不能仅凭所属行业认定。企业通过高新技术企业认定管理工作网填写、上传签字盖章申报表。
 
-- **原名单企业：** 已进入2025年度名单、当前高企资格仍有效的企业，自2026年9月起每月1日至10日提交
-- **新申请企业：** 自2026年10月起每月1日至10日提交
-- **总截止日：** 2027年4月10日；按通知窗口，下一个月度提交时段为2026年11月1日至10日
+<footer class="briefing-source">
+
+**发布机关：** 广州市南沙区工业和信息化局<br />
+**官方原标题：** 广州市南沙区工业和信息化局转发关于开展2026年度享受增值税加计抵减政策的先进制造业企业名单制定工作的通知
 
 [官方原文](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11043197.html) · [官方通知附件](https://www.gzns.gov.cn/attachment/8/8089/8089556/11043197.pdf)
+
+</footer>
+
+</section>
+
+<section class="briefing-empty">
 
 ## 土地规划及建设
 
 本期未收录10月13日至14日发布的土地规划新公告。两项10月15日届满的土地公示见“近期公告与持续关注”；其他事项请留意主管部门最新公告。
 
+</section>
+
 ## 招投标及采购
+
+<section class="briefing-item">
 
 ### 02｜东涌便民服务窗口辅助业务外包
 
-**官方原标题：** 东涌镇便民服务中心部分窗口辅助业务服务外包项目竞争性磋商公告  
-**状态：** 新发布 · **发布日期：** 2026-10-14 · **采购人：** 广州市南沙区东涌镇党群服务中心
+<p class="briefing-meta">新发布 · <time datetime="2026-10-14">2026-10-14</time></p>
 
-**一句话看懂：预算97.8264万元、服务期一年，10月15日起获取文件，10月26日14:30截止响应。**
+<div class="briefing-summary">
+
+预算**97.8264万元**、服务期**一年**，10月15日起获取文件，**10月26日14:30**截止响应。
+
+</div>
+
+<dl class="briefing-facts">
+  <div><dt>预算</dt><dd>人民币978,264元</dd></div>
+  <div><dt>获取文件</dt><dd>10月15日至21日，工作日09:00–12:00、14:30–17:30；每套300元，售后不退</dd></div>
+  <div><dt>响应与磋商</dt><dd>10月26日14:30；当日14:00起接收响应文件</dd></div>
+  <div><dt>地点</dt><dd>广州市南沙区南沙街尚品一街3号1214房</dd></div>
+  <div><dt>采购性质</dt><dd>原公告明确本项目不属于《政府采购法》第二条规定范围，采购过程参考政府采购有关法律法规</dd></div>
+</dl>
 
 项目编号GDJTCG2026-017，由广东建涛项目管理咨询有限公司代理，选定1家供应商承接部分窗口辅助业务。供应商须对整个项目响应；采购面向中小微企业、监狱企业或残疾人福利性单位，不接受联合体。服务期自合同签订之日起一年。
 
-- **预算：** 人民币978,264元
-- **获取文件：** 10月15日至21日，工作日09:00–12:00、14:30–17:30；每套300元，售后不退
-- **响应与磋商：** 10月26日14:30；当日14:00起接收响应文件
-- **地点：** 广州市南沙区南沙街尚品一街3号1214房
-- **采购性质：** 原公告明确本项目不属于《政府采购法》第二条规定范围，采购过程参考政府采购有关法律法规
+<footer class="briefing-source">
+
+**采购人：** 广州市南沙区东涌镇党群服务中心<br />
+**官方原标题：** 东涌镇便民服务中心部分窗口辅助业务服务外包项目竞争性磋商公告
 
 [官方原文](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11045314.html)
 
+</footer>
+
+</section>
+
+<section class="briefing-item">
+
 ### 03｜大岭界村桥下空间入口资产出租
 
-**官方原标题：** 港湾街道大岭界村罗屋桥下空间入口土地及地上附着物出租项目交易公告（网上竞投）  
-**状态：** 新发布 · **发布日期：** 2026-10-13 · **交易机构：** 港湾街道公共资源交易站
+<p class="briefing-meta">新发布 · <time datetime="2026-10-13">2026-10-13</time></p>
 
-**一句话看懂：109平方米土地及临时建筑出租，底价每月3,800元，10月22日报名及保证金截止。**
+<div class="briefing-summary">
+
+**109平方米**土地及临时建筑出租，底价**每月3,800元**，**10月22日**报名及保证金截止。
+
+</div>
+
+<dl class="briefing-facts">
+  <div><dt>底价</dt><dd>3,800元/宗/月，含税；每次增价100元/宗/月或其整数倍</dd></div>
+  <div><dt>保证金</dt><dd>交易保证金5万元；合同履行保证金3万元，另有工资保障金等要求，以原文为准</dd></div>
+  <div><dt>报名</dt><dd>10月14日至22日；交易保证金须10月22日17:00前到账</dd></div>
+  <div><dt>竞投</dt><dd>10月23日10:00–10:30，设延时机制</dd></div>
+</dl>
 
 资产位于江南路一巷1号前面桥下空间入口，包括109平方米土地及约87平方米临时集装箱建筑，用于与桥下空间配套的咖啡、奶茶、文创等商业用途。租期5年，免租15天，租金每3年在上年度基础上递增10%。公告说明资产没有建设工程规划许可证，经营证照及消防、环保等手续由承租人负责，参与前需核查现状与瑕疵。
 
-- **底价：** 3,800元/宗/月，含税；每次增价100元/宗/月或其整数倍
-- **保证金：** 交易保证金5万元；合同履行保证金3万元，另有工资保障金等要求，以原文为准
-- **报名：** 10月14日至22日；交易保证金须10月22日17:00前到账
-- **竞投：** 10月23日10:00–10:30，设延时机制
+<footer class="briefing-source">
+
+**交易机构：** 港湾街道公共资源交易站<br />
+**官方原标题：** 港湾街道大岭界村罗屋桥下空间入口土地及地上附着物出租项目交易公告（网上竞投）
 
 [官方原文](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11043216.html)
 
+</footer>
+
+</section>
+
+<section class="briefing-item">
+
 ### 04｜珠江街道羊城家政服务站中标结果
 
-**官方原标题：** 广州市南沙区珠江街道羊城家政基层服务站建设运营服务项目中标结果公告  
-**状态：** 新发布 · **发布日期：** 2026-10-13 · **招标人：** 广州市南沙区人民政府珠江街道办事处
+<p class="briefing-meta">新发布 · <time datetime="2026-10-13">2026-10-13</time></p>
 
-**一句话看懂：广州市携成养老服务有限公司中标，服务期两年，逐年考核续签。**
+<div class="briefing-summary">
+
+广州市携成养老服务有限公司中标，服务期**两年**，**逐年考核续签**。
+
+</div>
+
+<dl class="briefing-facts">
+  <div><dt>中标人</dt><dd>广州市携成养老服务有限公司</dd></div>
+  <div><dt>公告期限</dt><dd>3个日历日</dd></div>
+  <div><dt>事项阶段</dt><dd>已公布中标结果，并非仍在接受投标</dd></div>
+</dl>
 
 项目编号ZCNS2026FG16509，评审于10月12日完成，10月13日公布结果。服务期限自签订合同起两年，合同一年一签，上一年度评估合格方可续签，不合格则终止。公告明确没有相应财政预算资金，由中标人自行运营、盈亏自负。
 
-- **中标人：** 广州市携成养老服务有限公司
-- **公告期限：** 3个日历日
-- **事项阶段：** 已公布中标结果，并非仍在接受投标
+<footer class="briefing-source">
+
+**招标人：** 广州市南沙区人民政府珠江街道办事处<br />
+**官方原标题：** 广州市南沙区珠江街道羊城家政基层服务站建设运营服务项目中标结果公告
 
 [官方原文](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11042278.html)
 
+</footer>
+
+</section>
+
+<section class="briefing-item">
+
 ### 05｜民政综合辅助及业务服务询价
 
-**官方原标题：** 广州市南沙区民政局2026-2027年民政综合辅助和业务服务工作项目询价公告  
-**状态：** 新发布 · **发布日期：** 2026-10-13 · **采购机关：** 广州市南沙区民政局
+<p class="briefing-meta">新发布 · <time datetime="2026-10-13">2026-10-13</time></p>
 
-**一句话看懂：最高限价32万元，报价文件须10月19日18:00前送达。**
+<div class="briefing-summary">
+
+最高限价**32万元**，报价文件须**10月19日18:00**前送达。
+
+</div>
+
+<dl class="briefing-facts">
+  <div><dt>最高限价</dt><dd>32万元，包含税费、服务费等</dd></div>
+  <div><dt>材料</dt><dd>报价文件1正3副，密封递交</dd></div>
+  <div><dt>截止</dt><dd>10月19日18:00；当面送达或EMS均可，邮寄以签收为准</dd></div>
+  <div><dt>收件地点</dt><dd>南沙区环市大道中13号民政局303室</dd></div>
+  <div><dt>低价说明</dt><dd>报价低于控制价70%时须提交书面说明及证明；不足规定供应商数量时将终止并重新采购</dd></div>
+</dl>
 
 项目拟选择第三方机构，辅助居家社区养老、殡葬改革、社工服务站运营、社会工作服务管理及婚姻颁证等工作。计划服务期为2026年11月27日至2027年3月21日，以实际合同为准。须整体响应，采用综合评分；资格、信用、财务及税收社保证明等要求详见原文，不接受联合体。
 
-- **最高限价：** 32万元，包含税费、服务费等
-- **材料：** 报价文件1正3副，密封递交
-- **截止：** 10月19日18:00；当面送达或EMS均可，邮寄以签收为准
-- **收件地点：** 南沙区环市大道中13号民政局303室
-- **低价说明：** 报价低于控制价70%时须提交书面说明及证明；不足规定供应商数量时将终止并重新采购
+<footer class="briefing-source">
+
+**采购机关：** 广州市南沙区民政局<br />
+**官方原标题：** 广州市南沙区民政局2026-2027年民政综合辅助和业务服务工作项目询价公告
 
 [官方原文](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11038492.html)
+
+</footer>
+
+</section>
+
+<section class="briefing-empty">
 
 ## 民生招聘及公共服务
 
 本期未收录10月13日至14日发布的招聘或公共服务新公告。10月12日发布的3份卫生许可或机构名录，以及1项工伤文书送达，见“近期公告与持续关注”。招聘信息请同时关注区人社部门最新公告。
 
+</section>
+
 ## 其他
+
+<section class="briefing-item">
 
 ### 06｜面向粤港澳全面合作的研究成果征集
 
-**官方原标题：** 关于开展第二届广州南沙深化面向世界的粤港澳全面合作理论与实践研究成果征集活动的通知  
-**状态：** 新发布 · **发布日期：** 2026-10-14 · **发布机关：** 广东省广州南沙建设发展工作委员会办公室
+<p class="briefing-meta">新发布 · <time datetime="2026-10-14">2026-10-14</time></p>
 
-**一句话看懂：研究人员和实务工作者可报送研究成果，材料须于2026年11月30日前提交。**
+<div class="briefing-summary">
+
+研究人员和实务工作者可报送研究成果，材料须于**2026年11月30日前**提交。
+
+</div>
+
+<dl class="briefing-facts">
+  <div><dt>截止</dt><dd>2026年11月30日前</dd></div>
+  <div><dt>材料</dt><dd>研究成果报送表及研究成果电子版，按通知另送纸质材料</dd></div>
+  <div><dt>电子报送</dt><dd><a href="mailto:snsbcgzjhd@163.com">snsbcgzjhd@163.com</a></dd></div>
+  <div><dt>纸质报送</dt><dd>广州市南沙区凤凰大道1号1号楼301室</dd></div>
+  <div><dt>附件</dt><dd>报送表及选题参考目录见原文，附件细节尚未核实</dd></div>
+</dl>
 
 活动面向粤港澳大湾区理论研究人员及实务工作者，可由个人、单位或课题组申报。成果可为研究报告、决策咨询报告或论文；已发表成果可报送，但应注明。专题研究报告约2,000–15,000字，也可提交决策咨询报告或论文。评选关注创新性、可行性及政策转化潜力，优秀成果获颁证书，评选安排另行通知。
 
-- **截止：** 2026年11月30日前
-- **材料：** 研究成果报送表及研究成果电子版，按通知另送纸质材料
-- **电子报送：** snsbcgzjhd@163.com
-- **纸质报送：** 广州市南沙区凤凰大道1号1号楼301室
-- **附件：** 报送表及选题参考目录见原文，附件细节尚未核实
+<footer class="briefing-source">
+
+**发布机关：** 广东省广州南沙建设发展工作委员会办公室<br />
+**官方原标题：** 关于开展第二届广州南沙深化面向世界的粤港澳全面合作理论与实践研究成果征集活动的通知
 
 [官方原文及附件入口](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11045780.html)
 
+</footer>
+
+</section>
+
+<section class="briefing-item briefing-item--brief">
+
 ### 07｜准予专职律师执业
 
-**官方原标题：** 广东省司法厅准予专职律师执业决定书  
-**状态：** 新发布 · **发布日期：** 2026-10-14 · **作出机关：** 广东省司法厅；网页来源为广州市南沙区司法局
+<p class="briefing-meta">新发布 · <time datetime="2026-10-14">2026-10-14</time></p>
 
-**一句话看懂：这是一项个案执业许可结果，不是新增面向公众的申报政策。**
+<div class="briefing-summary">
+
+这是一项个案执业许可结果，不是新增面向公众的申报政策。
+
+</div>
 
 决定准予申请人在广东天诺律师事务所专职执业，并颁发律师执业证书。文书作出日期为10月10日，网页发布于10月14日。原文列出的救济期限仅适用于文书接收人。
 
+<footer class="briefing-source">
+
+**作出机关：** 广东省司法厅；网页来源为广州市南沙区司法局<br />
+**官方原标题：** 广东省司法厅准予专职律师执业决定书
+
 [官方原文](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046299.html)
+
+</footer>
+
+</section>
+
+<section class="briefing-item briefing-item--brief">
 
 ### 08｜准予变更律师执业机构
 
-**官方原标题：** 广东省司法厅准予变更律师执业机构决定书  
-**状态：** 新发布 · **发布日期：** 2026-10-14 · **作出机关：** 广东省司法厅；网页来源为广州市南沙区司法局
+<p class="briefing-meta">新发布 · <time datetime="2026-10-14">2026-10-14</time></p>
 
-**一句话看懂：公告确认一项大湾区律师执业机构变更。**
+<div class="briefing-summary">
+
+公告确认一项大湾区律师执业机构变更。
+
+</div>
 
 决定准予申请人变更至天诺余陈杨（南沙）联营律师事务所执业，执业类别为大湾区律师。文书作出日期为10月10日。该项为个案行政许可结果，没有面向一般公众的报名或申报截止。
 
+<footer class="briefing-source">
+
+**作出机关：** 广东省司法厅；网页来源为广州市南沙区司法局<br />
+**官方原标题：** 广东省司法厅准予变更律师执业机构决定书
+
 [官方原文](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046289.html)
+
+</footer>
+
+</section>
+
+<section class="briefing-item briefing-item--brief">
 
 ### 09｜颁发公司律师证书
 
-**官方原标题：** 广东省司法厅颁发公司律师证书通知书  
-**状态：** 新发布 · **发布日期：** 2026-10-14 · **作出机关：** 广东省司法厅；网页来源为广州市南沙区司法局
+<p class="briefing-meta">新发布 · <time datetime="2026-10-14">2026-10-14</time></p>
 
-**一句话看懂：公告公开一项公司律师工作证书颁发结果。**
+<div class="briefing-summary">
+
+公告公开一项公司律师工作证书颁发结果。
+
+</div>
 
 通知书作出日期与网页发布日期均为10月14日，事项为向申请人颁发公司律师工作证书。该项为个案行政许可结果，没有面向公众的申报节点。
 
+<footer class="briefing-source">
+
+**作出机关：** 广东省司法厅；网页来源为广州市南沙区司法局<br />
+**官方原标题：** 广东省司法厅颁发公司律师证书通知书
+
 [官方原文](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046265.html)
+
+</footer>
+
+</section>
+
+<section class="briefing-item briefing-item--brief">
 
 ### 10｜行政复议文书公告送达
 
-**官方原标题：** 广州市南沙区人民政府行政复议文书送达公告  
-**状态：** 新发布 · **发布日期：** 2026-10-14 · **发布机关：** 广州市南沙区人民政府；网页来源为区司法局
+<p class="briefing-meta">新发布 · <time datetime="2026-10-14">2026-10-14</time></p>
 
-**一句话看懂：区政府向案件第三人公告送达行政复议决定书。**
+<div class="briefing-summary">
+
+区政府向案件第三人公告送达行政复议决定书。
+
+</div>
 
 公告涉及穗南府行复〔2026〕576号决定书，因无法联系第三人而公告送达。原文规定，自公告发布之日起经过30日视为送达，并要求在该期间领取文书。相关当事人请留意领取要求及送达期限。公告落款为10月13日，网页发布于10月14日。
 
+<footer class="briefing-source">
+
+**发布机关：** 广州市南沙区人民政府；网页来源为区司法局<br />
+**官方原标题：** 广州市南沙区人民政府行政复议文书送达公告
+
 [官方原文](https://www.gzns.gov.cn/zwgk/fyws/content/post_11043897.html)
+
+</footer>
+
+</section>
+
+<section class="briefing-digest">
 
 ## 近期公告与持续关注
 
@@ -239,17 +414,115 @@ sample: false
 - **广州市规划和自然资源局南沙区分局国有建设用地使用权协议出让公示：** 2026NXY-3地块位于万顷沙镇红莲路南侧、十涌北侧，146平方米，二类工业用地，拟出让年限50年、价格30万元，意向用地单位为广州南沙置芯科技有限公司。[官方原文](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11036094.html)
 - **广州市规划和自然资源局南沙区分局2026NGY-24号地块国有建设用地使用权网上挂牌出让成交结果公示：** 地块位于榄核镇榄核大道南侧、潭东大道东侧，13,333平方米，一类工业用地，出让年限30年，成交价1,016万元，受让单位为广东创芯旗智能工业有限公司。9月28日成交，10月10日才发布结果公示。[官方原文](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11036064.html)
 
-## 接下来别错过
+</section>
+
+## 办理与截止提醒
 
 以下按办理时间排序：
 
-- **10月15日｜2项土地公示届满：** 2026NXY-3协议出让、2026NGY-24成交结果；有异议须在公示期内书面提出。[协议出让依据](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11036094.html) · [成交结果依据](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11036064.html)
-- **10月15日至21日｜1项采购获取文件：** 东涌窗口辅助业务外包，工作日09:00–12:00、14:30–17:30；响应及磋商为10月26日14:30。[官方依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11045314.html)
-- **10月19日18:00｜2项询价送达截止：** 民政综合辅助服务送303室；港式养老中心设备采购送203室。两项均在环市大道中13号，邮寄以签收为准。[综合服务依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11038492.html) · [设备采购依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11038081.html)
-- **10月22日16:00前｜3项商铺出租报名：** 东兴三路138号、94号、150号须在当天指定时段现场报名，保证金16:00前到账；10月23日10:00现场竞价。[138号](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11036841.html) · [94号](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11036848.html) · [150号](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11036833.html)
-- **10月22日17:00前｜1项资产出租：** 大岭界村桥下空间入口网上报名及交易保证金到账；10月23日10:00–10:30竞投，注意延时规则。[官方依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11043216.html)
-- **11月1日至10日｜1项月度申报窗口：** 先进制造业企业2026年度增值税加计抵减名单申报；最终截止2027年4月10日。[官方依据](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11043197.html)
-- **11月30日前｜1项成果征集：** 提交粤港澳全面合作研究成果及报送表，电子及纸质要求见通知。[官方依据](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11045780.html)
+<div class="briefing-deadlines">
+
+<section class="briefing-deadline">
+
+### 10月15日
+
+<div>
+
+**2项土地公示届满**
+
+2026NXY-3协议出让、2026NGY-24成交结果；有异议须在公示期内书面提出。[协议出让依据](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11036094.html) · [成交结果依据](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11036064.html)
+
+</div>
+
+</section>
+
+<section class="briefing-deadline">
+
+### 10月15日至21日
+
+<div>
+
+**1项采购获取文件**
+
+东涌窗口辅助业务外包，工作日09:00–12:00、14:30–17:30；响应及磋商为10月26日14:30。[官方依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11045314.html)
+
+</div>
+
+</section>
+
+<section class="briefing-deadline">
+
+### 10月19日18:00
+
+<div>
+
+**2项询价送达截止**
+
+民政综合辅助服务送303室；港式养老中心设备采购送203室。两项均在环市大道中13号，邮寄以签收为准。[综合服务依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11038492.html) · [设备采购依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11038081.html)
+
+</div>
+
+</section>
+
+<section class="briefing-deadline">
+
+### 10月22日16:00前
+
+<div>
+
+**3项商铺出租报名**
+
+东兴三路138号、94号、150号须在当天指定时段现场报名，保证金16:00前到账；10月23日10:00现场竞价。[138号](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11036841.html) · [94号](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11036848.html) · [150号](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11036833.html)
+
+</div>
+
+</section>
+
+<section class="briefing-deadline">
+
+### 10月22日17:00前
+
+<div>
+
+**1项资产出租**
+
+大岭界村桥下空间入口网上报名及交易保证金到账；10月23日10:00–10:30竞投，注意延时规则。[官方依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11043216.html)
+
+</div>
+
+</section>
+
+<section class="briefing-deadline">
+
+### 11月1日至10日
+
+<div>
+
+**1项月度申报窗口**
+
+先进制造业企业2026年度增值税加计抵减名单申报；最终截止2027年4月10日。[官方依据](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11043197.html)
+
+</div>
+
+</section>
+
+<section class="briefing-deadline">
+
+### 11月30日前
+
+<div>
+
+**1项成果征集**
+
+提交粤港澳全面合作研究成果及报送表，电子及纸质要求见通知。[官方依据](https://www.gzns.gov.cn/zwgk/tzgg/content/post_11045780.html)
+
+</div>
+
+</section>
+
+</div>
+
+<section class="briefing-notes">
 
 ## 阅读提示
 
@@ -257,6 +530,8 @@ sample: false
 
 非政府官方发布，具体内容及解释以发布机关为准。
 
+</section>
+
 <!-- nansha-report-metadata
-{"version":1,"report_date":"2026-10-14","timezone":"Asia/Shanghai","edition":"first_manual_afternoon","previous_report":null,"target_window_start":"2026-10-13T17:47:00+08:00","target_window_end":"2026-10-14T17:47:00+08:00","date_overlap":["2026-10-13","2026-10-14"],"review_date":"2026-10-12","collection_start":"2026-10-14T17:42:00+08:00","collection_end":"2026-10-14T17:47:00+08:00","generated_at":"2026-10-14T17:51:00+08:00","new_count":10,"material_update_count":0,"review_count":10,"reminder_unique_items":11,"categories":{"政策及涉企":1,"土地规划及建设":0,"招投标及采购":4,"民生招聘及公共服务":0,"其他":5},"articles":[{"title":"广州市南沙区工业和信息化局转发关于开展2026年度享受增值税加计抵减政策的先进制造业企业名单制定工作的通知","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11043197.html","publication_date":"2026-10-13"},{"title":"东涌镇便民服务中心部分窗口辅助业务服务外包项目竞争性磋商公告","url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11045314.html","publication_date":"2026-10-14"},{"title":"港湾街道大岭界村罗屋桥下空间入口土地及地上附着物出租项目交易公告（网上竞投）","url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11043216.html","publication_date":"2026-10-13"},{"title":"广州市南沙区珠江街道羊城家政基层服务站建设运营服务项目中标结果公告","url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11042278.html","publication_date":"2026-10-13"},{"title":"广州市南沙区民政局2026-2027年民政综合辅助和业务服务工作项目询价公告","url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11038492.html","publication_date":"2026-10-13"},{"title":"关于开展第二届广州南沙深化面向世界的粤港澳全面合作理论与实践研究成果征集活动的通知","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11045780.html","publication_date":"2026-10-14"},{"title":"广东省司法厅准予专职律师执业决定书","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046299.html","publication_date":"2026-10-14"},{"title":"广东省司法厅准予变更律师执业机构决定书","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046289.html","publication_date":"2026-10-14"},{"title":"广东省司法厅颁发公司律师证书通知书","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046265.html","publication_date":"2026-10-14"},{"title":"广州市南沙区人民政府行政复议文书送达公告","url":"https://www.gzns.gov.cn/zwgk/fyws/content/post_11043897.html","publication_date":"2026-10-14"}],"source_checks":[{"url":"https://www.gzns.gov.cn/zwgk/tzgg/","pages":[1,2],"status":"listed_window_checked","date_range":["2026-10-12","2026-10-14"],"check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/zwgk/ztbxx/","pages":[1],"status":"listed_window_checked","date_range":["2026-10-12","2026-10-14"],"check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/tzns/tzdt/tzgg/","pages":[1],"status":"first_page_checked","latest_visible_date":"2026-09-30","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/gznsrs/gkmlpt/index","status":"incomplete_dynamic_rows_unreadable","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/gznsgh/gkmlpt/index","status":"incomplete_dynamic_rows_unreadable","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/gznsdcz/gkmlpt/index","status":"incomplete_text_shell","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/zwgk/zdlyxxgk/zdcq/zdpzxx/","status":"incomplete_list_versions_inconsistent","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/zwgk/fyws/","status":"incomplete_list_versions_inconsistent","verified_article":"https://www.gzns.gov.cn/zwgk/fyws/content/post_11043897.html","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"}],"coverage_complete":false,"unresolved":["人社、规划资源与东涌动态目录","4份10月12日Excel附件未读取","其余部门镇街未全部遍历","复议及征地批准目录显示版本不一致","部分政策兑现动态正文、其他附件未读"],"report_body_sha256":"f43cd746832bda2a7c40d182a92200b1222c719e977965596c266fcf0a46cb64","fingerprint_scope_note":"未保存完整官方正文指纹。后续须以本篇已核实关键事实与官方新正文逐项比较；以下仅为实际读取的短句指纹，不代表全文。","verified_excerpt_fingerprints":[{"url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11045780.html","normalization":"remove whitespace","sha256":"9f43ed102609612a9959ab7569f202b678e1e6ba56be7286a3f68a38ab723bf9"},{"url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11045314.html","normalization":"remove whitespace","sha256":"a4f00bc121a8a4d5b23c3b670e2fe2624aab30cd88c7b8682894048d47028fed"}],"report_body_sha256_scope":"UTF-8 Markdown preceding this metadata comment, including frontmatter and trailing newlines"}
+{"version":1,"report_date":"2026-10-14","timezone":"Asia/Shanghai","edition":"first_manual_afternoon","previous_report":null,"target_window_start":"2026-10-13T17:47:00+08:00","target_window_end":"2026-10-14T17:47:00+08:00","date_overlap":["2026-10-13","2026-10-14"],"review_date":"2026-10-12","collection_start":"2026-10-14T17:42:00+08:00","collection_end":"2026-10-14T17:47:00+08:00","generated_at":"2026-10-14T17:51:00+08:00","new_count":10,"material_update_count":0,"review_count":10,"reminder_unique_items":11,"categories":{"政策及涉企":1,"土地规划及建设":0,"招投标及采购":4,"民生招聘及公共服务":0,"其他":5},"articles":[{"title":"广州市南沙区工业和信息化局转发关于开展2026年度享受增值税加计抵减政策的先进制造业企业名单制定工作的通知","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11043197.html","publication_date":"2026-10-13"},{"title":"东涌镇便民服务中心部分窗口辅助业务服务外包项目竞争性磋商公告","url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11045314.html","publication_date":"2026-10-14"},{"title":"港湾街道大岭界村罗屋桥下空间入口土地及地上附着物出租项目交易公告（网上竞投）","url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11043216.html","publication_date":"2026-10-13"},{"title":"广州市南沙区珠江街道羊城家政基层服务站建设运营服务项目中标结果公告","url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11042278.html","publication_date":"2026-10-13"},{"title":"广州市南沙区民政局2026-2027年民政综合辅助和业务服务工作项目询价公告","url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11038492.html","publication_date":"2026-10-13"},{"title":"关于开展第二届广州南沙深化面向世界的粤港澳全面合作理论与实践研究成果征集活动的通知","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11045780.html","publication_date":"2026-10-14"},{"title":"广东省司法厅准予专职律师执业决定书","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046299.html","publication_date":"2026-10-14"},{"title":"广东省司法厅准予变更律师执业机构决定书","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046289.html","publication_date":"2026-10-14"},{"title":"广东省司法厅颁发公司律师证书通知书","url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11046265.html","publication_date":"2026-10-14"},{"title":"广州市南沙区人民政府行政复议文书送达公告","url":"https://www.gzns.gov.cn/zwgk/fyws/content/post_11043897.html","publication_date":"2026-10-14"}],"source_checks":[{"url":"https://www.gzns.gov.cn/zwgk/tzgg/","pages":[1,2],"status":"listed_window_checked","date_range":["2026-10-12","2026-10-14"],"check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/zwgk/ztbxx/","pages":[1],"status":"listed_window_checked","date_range":["2026-10-12","2026-10-14"],"check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/tzns/tzdt/tzgg/","pages":[1],"status":"first_page_checked","latest_visible_date":"2026-09-30","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/gznsrs/gkmlpt/index","status":"incomplete_dynamic_rows_unreadable","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/gznsgh/gkmlpt/index","status":"incomplete_dynamic_rows_unreadable","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/gznsdcz/gkmlpt/index","status":"incomplete_text_shell","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/zwgk/zdlyxxgk/zdcq/zdpzxx/","status":"incomplete_list_versions_inconsistent","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"},{"url":"https://www.gzns.gov.cn/zwgk/fyws/","status":"incomplete_list_versions_inconsistent","verified_article":"https://www.gzns.gov.cn/zwgk/fyws/content/post_11043897.html","check_window":"2026-10-14 17:42–17:47 Asia/Shanghai"}],"coverage_complete":false,"unresolved":["人社、规划资源与东涌动态目录","4份10月12日Excel附件未读取","其余部门镇街未全部遍历","复议及征地批准目录显示版本不一致","部分政策兑现动态正文、其他附件未读"],"report_body_sha256":"7132b4b91829fe72d48a7a60d0f22b7be5ee1e3ab2841407b4e1a60f9d3a669c","fingerprint_scope_note":"未保存完整官方正文指纹。后续须以本篇已核实关键事实与官方新正文逐项比较；以下仅为实际读取的短句指纹，不代表全文。","verified_excerpt_fingerprints":[{"url":"https://www.gzns.gov.cn/zwgk/tzgg/content/post_11045780.html","normalization":"remove whitespace","sha256":"9f43ed102609612a9959ab7569f202b678e1e6ba56be7286a3f68a38ab723bf9"},{"url":"https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11045314.html","normalization":"remove whitespace","sha256":"a4f00bc121a8a4d5b23c3b670e2fe2624aab30cd88c7b8682894048d47028fed"}],"report_body_sha256_scope":"UTF-8 Markdown preceding this metadata comment, including frontmatter and trailing newlines"}
 -->
