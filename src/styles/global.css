@@ -265,11 +265,44 @@
   .prose table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; margin: 27px 0; font-size: 14px; }
   .prose th, .prose td { border-bottom: 1px solid var(--line); padding: 12px 22px 12px 0; text-align: left; min-width: 120px; }
   .prose th { color: var(--accent); }
-  .toc { font-size: 11px; }
-  .toc nav { position: sticky; top: 35px; border-left: 1px solid var(--line); padding-left: 20px; }
-  .toc p { color: var(--text); margin-bottom: 15px; font-size: 12px; }
-  .toc a { display: block; color: var(--muted); margin-bottom: 12px; }
-  .toc a:hover { color: var(--accent); }
+  .toc { min-width: 0; font-size: 12px; }
+  .toc nav { position: sticky; top: 35px; border-left: 1px solid var(--line); padding-left: 12px; }
+  .toc-title { color: var(--text); margin: 0 13px 12px; font-size: 12px; }
+  .toc-scroll { max-height: calc(100svh - 110px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--line) transparent; padding: 3px; }
+  .toc-scroll:hover, .toc-scroll:focus-within { scrollbar-color: color-mix(in srgb, var(--muted) 55%, var(--bg)) transparent; }
+  /* 支持自定义滚动条的浏览器使用无箭头细轨，其他浏览器保留原生细滚动条。 */
+  @supports selector(::-webkit-scrollbar) {
+    .toc-scroll, .toc-scroll:hover, .toc-scroll:focus-within { scrollbar-width: auto; scrollbar-color: auto; }
+    .toc-scroll::-webkit-scrollbar { width: 4px; }
+    .toc-scroll::-webkit-scrollbar-track { background: transparent; }
+    .toc-scroll::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+    .toc-scroll:hover::-webkit-scrollbar-thumb, .toc-scroll:focus-within::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--muted) 55%, var(--bg)); }
+    .toc-scroll::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+  }
+  .toc-list { list-style: none; margin: 0; padding: 0; }
+  .toc-list .toc-list { margin: 2px 0 6px 12px; font-size: 11px; }
+  .toc-entry { display: grid; grid-template-columns: minmax(0, 1fr) 24px; align-items: start; list-style: none; }
+  summary.toc-entry { cursor: pointer; }
+  .toc-entry::-webkit-details-marker { display: none; }
+  .toc-link { position: relative; display: block; min-width: 0; padding: 6px 4px 6px 10px; color: var(--muted); line-height: 1.6; overflow-wrap: anywhere; }
+  .toc-link::before { content: ''; position: absolute; left: 0; top: calc(6px + .8em - 2px); width: 4px; height: 4px; border-radius: 50%; background: var(--accent); opacity: 0; transition: opacity 160ms ease; }
+  .toc-link:hover { color: var(--text); }
+  .toc-link:focus-visible, summary.toc-entry:focus-visible { outline-width: 1px; outline-offset: 1px; }
+  .toc-caret { display: grid; place-content: center; width: 24px; height: 31px; color: var(--muted); }
+  summary:hover .toc-caret, summary:focus-visible .toc-caret { color: var(--accent); }
+  .toc-caret-stem { transform-origin: center; transition: transform 160ms ease, opacity 160ms ease; }
+  .toc-branch[open] > summary .toc-caret-stem { transform: scaleY(0); opacity: 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports selector(::details-content) and (interpolate-size: allow-keywords) {
+      .toc-branch { interpolate-size: allow-keywords; }
+      /* 保留原生开合语义；连续点击时由 CSS 从当前高度自然反向过渡。 */
+      .toc-branch::details-content { display: flow-root; height: 0; overflow: clip; opacity: 0; transition: height 220ms cubic-bezier(.2, 0, 0, 1), opacity 160ms ease, content-visibility 220ms allow-discrete; }
+      .toc-branch[open]::details-content { height: auto; opacity: 1; }
+    }
+  }
+  .toc-branch[data-active-path] > summary > .toc-link { color: var(--text); }
+  .toc-link[aria-current="location"], .toc-link[data-current-location] { color: var(--accent); }
+  .toc-link[aria-current="location"]::before, .toc-link[data-current-location]::before { opacity: 1; }
   .article-footer { max-width: 700px; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 14px; }
   .article-footer > p { font-family: var(--serif); color: var(--muted); font-size: 16px; margin-top: 27px; }
   .next-article { display: block; background: var(--surface); padding: 23px; margin-top: 35px; border-radius: 4px; }
@@ -364,7 +397,7 @@
     .article-body-grid { grid-template-columns: 1fr; gap: 25px; padding-top: 24px; }
     .toc { grid-row: 1; }
     .toc nav { position: static; }
-    .toc a { display: inline-block; margin-right: 17px; margin-bottom: 8px; }
+    .toc-scroll { max-height: min(45svh, 360px); }
     .prose { font-size: 16px; }
     .prose h2 { font-size: 23px; }
     .article-page { padding-bottom: 50px; }

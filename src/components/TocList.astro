@@ -1,0 +1,24 @@
+---
+import type { TocNode } from '../lib/toc';
+interface Props { nodes: TocNode[]; }
+const { nodes } = Astro.props;
+---
+<ol class="toc-list">
+  {nodes.map(node => (
+    <li>
+      {node.children.length ? (
+        <details class="toc-branch">
+          <summary class="toc-entry">
+            <a class="toc-link" href={`#${node.slug}`} data-heading-id={node.slug}>{node.text}</a>
+            <span class="toc-caret" aria-hidden="true" title="展开或折叠子目录">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"><path d="M3 8h10" /><path class="toc-caret-stem" d="M8 3v10" /></svg>
+            </span>
+          </summary>
+          <Astro.self nodes={node.children} />
+        </details>
+      ) : (
+        <div class="toc-entry toc-leaf"><a class="toc-link" href={`#${node.slug}`} data-heading-id={node.slug}>{node.text}</a></div>
+      )}
+    </li>
+  ))}
+</ol>

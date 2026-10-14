@@ -1,0 +1,127 @@
+---
+import TocList from './TocList.astro';
+import { buildToc, type TocHeading } from '../lib/toc';
+interface Props { headings: TocHeading[]; }
+const tree = buildToc(Astro.props.headings);
+---
+{tree.length > 0 && (
+  <aside class="toc" data-toc>
+    <nav aria-label="文章目录">
+      <p class="toc-title">本文目录</p>
+      <div class="toc-scroll"><TocList nodes={tree} /></div>
+    </nav>
+  </aside>
+)}
+<script>
+  const toc = document.querySelector<HTMLElement>('[data-toc]');
+  const article = document.querySelector<HTMLElement>('[data-article-content]');
+
+  if (toc && article) {
+    const scroller = toc.querySelector<HTMLElement>('.toc-scroll')!;
+    const links = Array.from(toc.querySelectorAll<HTMLAnchorElement>('.toc-link'));
+    const sections = links.flatMap(link => {
+      const heading = document.getElementById(link.dataset.headingId!);
+      return heading && article.contains(heading) ? [{ heading, link }] : [];
+    });
+    const desktop = matchMedia('(min-width: 701px)');
+    const manualBranches = new Map<HTMLDetailsElement, boolean>();
+    const autoBranches = new Set<HTMLDetailsElement>();
+    let currentLink: HTMLAnchorElement | undefined;
+    let frame = 0;
+
+    const ancestorsOf = (link: HTMLAnchorElement) => {
+      const ancestors: HTMLDetailsElement[] = [];
+      let branch = link.closest('.toc-list')?.closest<HTMLDetailsElement>('.toc-branch');
+      while (branch) {
+        ancestors.unshift(branch);
+        branch = branch.parentElement?.closest<HTMLDetailsElement>('.toc-branch');
+      }
+      return ancestors;
+    };
+
+    const showCurrentLocation = (follow = false) => {
+      toc.querySelector('[data-current-location]')?.removeAttribute('data-current-location');
+      if (!currentLink) return;
+      // 手动折叠后仍在可见的父级标识当前位置。
+      const closed = ancestorsOf(currentLink).find(branch => !branch.open);
+      const visibleLink = closed?.querySelector<HTMLAnchorElement>('summary > .toc-link') ?? currentLink;
+      visibleLink.setAttribute('data-current-location', '');
+      if (!follow || !desktop.matches || toc.querySelector(':focus-visible')) return;
+
+      // 只滚动目录自身，避免 scrollIntoView 带动正文或抢走键盘焦点。
+      const bounds = scroller.getBoundingClientRect();
+      const item = visibleLink.getBoundingClientRect();
+      if (item.top < bounds.top + 6) scroller.scrollTop += item.top - bounds.top - 6;
+      else if (item.bottom > bounds.bottom - 6) scroller.scrollTop += item.bottom - bounds.bottom + 6;
+    };
+
+    const setCurrent = (link: HTMLAnchorElement | undefined) => {
+      if (link === currentLink) return;
+      currentLink?.removeAttribute('aria-current');
+      toc.querySelectorAll('[data-active-path]').forEach(branch => branch.removeAttribute('data-active-path'));
+      currentLink = link;
+      const ancestors = link ? ancestorsOf(link) : [];
+
+      for (const branch of autoBranches) {
+        if (!ancestors.includes(branch) && !branch.contains(document.activeElement)) {
+          branch.open = false;
+          autoBranches.delete(branch);
+        }
+      }
+      for (const branch of ancestors) {
+        branch.setAttribute('data-active-path', '');
+        if (desktop.matches && !branch.open && manualBranches.get(branch) !== false) {
+          branch.open = true;
+          if (!manualBranches.has(branch)) autoBranches.add(branch);
+        }
+      }
+      link?.setAttribute('aria-current', 'location');
+      showCurrentLocation(true);
+    };
+
+    const update = () => {
+      frame = 0;
+      // 标题离开视口后，长章节的正文仍属于该章节。
+      const readingLine = Math.min(160, window.innerHeight * 0.2);
+      let active = sections[0];
+      for (const section of sections) {
+        if (section.heading.getBoundingClientRect().top > readingLine) break;
+        active = section;
+      }
+      const page = document.scrollingElement;
+      if (page && window.scrollY > 0 && window.scrollY + window.innerHeight >= page.scrollHeight - 2) {
+        active = sections[sections.length - 1];
+      }
+      setCurrent(active?.link);
+    };
+    const scheduleUpdate = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+
+    toc.addEventListener('click', event => {
+      const target = event.target;
+      if (!(target instanceof Element) || target.closest('a')) return;
+      const summary = target.closest('summary');
+      const branch = summary?.parentElement;
+      if (branch instanceof HTMLDetailsElement) {
+        // summary 的原生点击（含键盘触发）负责开合，记录用户选择即可。
+        manualBranches.set(branch, !branch.open);
+        autoBranches.delete(branch);
+      }
+    });
+    toc.addEventListener('toggle', () => showCurrentLocation(), true);
+    // 自动展开时持续跟随实际高度；手动开合的分支不抢走目录滚动位置。
+    const branchResize = new ResizeObserver(entries => {
+      if (entries.some(({ target }) => target instanceof HTMLDetailsElement
+        && target.open && autoBranches.has(target))) showCurrentLocation(true);
+    });
+    toc.querySelectorAll('.toc-branch').forEach(branch => branchResize.observe(branch));
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('hashchange', scheduleUpdate);
+    window.addEventListener('pageshow', scheduleUpdate);
+    window.addEventListener('load', scheduleUpdate);
+    new ResizeObserver(scheduleUpdate).observe(article);
+    scheduleUpdate();
+  }
+</script>
