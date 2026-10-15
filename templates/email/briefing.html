@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>{{SUBJECT}}</title>
+  <!-- 基础外观全部内联；以下样式只作增强，移除后仍可阅读。 -->
+  <style>
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    a { text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid #526347; outline-offset: 3px; }
+    @media screen and (max-width: 620px) {
+      .outer-pad { padding: 0 !important; }
+      .page-pad { padding-left: 22px !important; padding-right: 22px !important; }
+      .mail-title { font-size: 27px !important; line-height: 38px !important; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .email-bg { background-color: #151a15 !important; }
+      .email-paper { background-color: #1c211c !important; }
+      .email-soft { background-color: #252f24 !important; }
+      .email-text { color: #eceee4 !important; }
+      .email-muted { color: #b0b6a8 !important; }
+      .email-accent { color: #b5c79d !important; }
+      .email-rule { border-color: #3a4237 !important; }
+      .email-bar, .email-button { background-color: #b5c79d !important; }
+      .email-button a { color: #1c211c !important; }
+      .email-mark { border-left-color: #b5c79d !important; }
+    }
+  </style>
+  <!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+</head>
+<body class="email-bg" style="margin:0;padding:0;width:100%;background-color:#eeede6;color:#292d28;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;">
+  <div aria-hidden="true" style="display:none!important;visibility:hidden;opacity:0;color:transparent;height:0;max-height:0;max-width:0;overflow:hidden;font-size:1px;line-height:1px;mso-hide:all;">{{PREHEADER}}</div>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-bg" bgcolor="#eeede6" style="width:100%;border-collapse:collapse;background-color:#eeede6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;font-size:16px;line-height:28px;color:#292d28;">
+    <tr><td align="center" class="outer-pad" style="padding:28px 12px;">
+      <!--[if mso]><table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0"><tr><td><![endif]-->
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-paper" bgcolor="#f8f7f3" style="width:100%;max-width:600px;margin:0 auto;border-collapse:collapse;background-color:#f8f7f3;">
+        <tr><td height="4" class="email-bar" bgcolor="#526347" style="height:4px;background-color:#526347;font-size:0;line-height:0;">&nbsp;</td></tr>
+        <tr><td class="page-pad" style="padding:24px 32px 0;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+            <tr>
+              <td class="email-text" style="color:#292d28;font-family:Georgia,'Times New Roman',serif;font-size:29px;line-height:42px;font-weight:bold;letter-spacing:-1px;">xlc<span class="email-accent" style="color:#526347;">.</span></td>
+              <td align="right" style="text-align:right;"><a class="email-muted" href="{{WEB_URL}}" style="display:inline-block;padding:10px 0;color:#70736a;font-size:13px;line-height:24px;text-decoration:underline;">在网页中阅读</a></td>
+            </tr>
+          </table>
+        </td></tr>
+        <tr><td class="page-pad" style="padding:22px 32px 24px;">
+          <p class="email-muted" style="margin:0 0 12px;color:#70736a;font-size:13px;line-height:22px;letter-spacing:1px;">{{DATE_LABEL}} · 邮件速览</p>
+          <h1 class="mail-title email-text" style="margin:0 0 14px;color:#292d28;font-family:'Songti SC','SimSun',Georgia,serif;font-weight:400;font-size:30px;line-height:42px;">{{TITLE}}</h1>
+          <p class="email-muted" style="margin:0;color:#70736a;font-size:15px;line-height:26px;">{{INTRO}}</p>
+        </td></tr>
+        <tr><td class="page-pad" style="padding:0 32px 12px;">{{STATS}}</td></tr>
+        {{TODAY}}
+        {{STORIES}}
+        {{UPCOMING}}
+        {{RELATIVE_DEADLINES}}
+        {{BRIEFS}}
+        <tr><td class="page-pad" style="padding:12px 32px 30px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+            <tr><td class="email-button" align="center" bgcolor="#526347" style="background-color:#526347;text-align:center;padding:14px 18px;border-radius:3px;"><a href="{{WEB_URL}}" style="display:block;color:#ffffff;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;">阅读完整早报 &nbsp; →</a></td></tr>
+          </table>
+          <p class="email-muted" style="margin:12px 0 0;text-align:center;color:#70736a;font-size:12px;line-height:22px;">完整条目、办理条件与来源链接见网页版。</p>
+        </td></tr>
+        <tr><td class="page-pad email-rule" style="padding:22px 32px 28px;border-top:1px solid #dedfd5;">
+          <p class="email-text" style="margin:0 0 9px;color:#292d28;font-size:13px;line-height:22px;font-weight:600;">阅读提示</p>
+          {{NOTES}}
+          <p class="email-muted" style="margin:16px 0 0;color:#70736a;font-size:12px;line-height:21px;">XLC · 记录与整理<br>本期日期 {{DATE}}，所有时间均为北京时间。</p>
+        </td></tr>
+      </table>
+      <!--[if mso]></td></tr></table><![endif]-->
+    </td></tr>
+  </table>
+</body>
+</html>

@@ -82,6 +82,16 @@ Copy-Item -LiteralPath templates/briefing.md -Destination src/content/posts/nans
 
 阅读时长忽略 HTML 包装、注释和 Markdown 链接地址。若文章带有 `nansha-report-metadata`，修改内容后应更新其中的 `report_body_sha256`：取该注释开始之前的全部 UTF-8 内容（包含 frontmatter 和空行）计算 SHA-256，保留来源核验记录。
 
+### HTML 邮件速览
+
+邮件沿用早报配色，使用适合手机邮箱的单栏版式，按当日提醒、重点摘要、后续节点、相对期限和其他公告排列。截止类内容逐项保留，包括办理条件、受理方式及相对送达期限；非时限类背景可摘要。模板与内容分开维护，输出 HTML 正文和纯文本备份。
+
+```sh
+npm run email:render -- examples/email/nansha-morning-2026-10-15.json
+```
+
+查看 [10/15 邮件样例](examples/email/nansha-morning-2026-10-15.html) 和 [复用说明](templates/email/README.md)。该命令只生成本地文件；邮件发送服务可单独接入。
+
 ## 部署到 Cloudflare Pages（当前生产环境）
 
 - 正式地址：`https://1610161.xyz`

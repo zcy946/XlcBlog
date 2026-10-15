@@ -7,7 +7,8 @@
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro check && astro build",
     "preview": "astro preview --host 127.0.0.1",
-    "check": "astro check"
+    "check": "astro check",
+    "email:render": "node scripts/render-briefing-email.mjs"
   },
   "dependencies": {
     "astro": "7.3.5"
