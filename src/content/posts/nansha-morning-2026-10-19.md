@@ -1,6 +1,6 @@
 ---
 title: '南沙区政府早报｜2026-10-19'
-description: '本期已核实范围未发现新增公告，补充3条此前公告，关注社区招聘资格复核、宣传材料报价及设施农业公示。'
+description: '本期已核实范围未发现新增公告，补充4条此前公告，关注万顷沙规划意见征询、社区招聘资格复核、宣传材料报价及设施农业公示。'
 date: 2026-10-19
 category: '南沙区政府早报'
 format: briefing
@@ -9,18 +9,20 @@ draft: false
 sample: false
 ---
 
-<p class="briefing-intro">2026年10月19日，星期一。本期收录区间为2026年10月18日07:06:44至2026年10月19日07:05:07，按官方发布日期及已核实内容整理；另补充10月10日至12日公告及此前已发布的办理事项。以下时间均为北京时间。</p>
+<p class="briefing-intro">2026年10月19日，星期一。本期收录区间为2026年10月18日07:06:44至2026年10月19日07:05:07，按官方发布日期及已核实内容整理；另补充9月20日及10月10日至12日公告及此前已发布的办理事项。以下时间均为北京时间。</p>
+
+<p class="briefing-meta">修订于2026年10月19日14:06：补充收录9月20日发布的万顷沙镇规划草案咨询及10月19日反馈期限，不计本期新增。</p>
 
 <section class="briefing-overview">
 
 ## 今日先看
 
-本期未发现新增公告。以上仅限本期已核实的官方信息。另补充3条此前公告，并保留2条持续关注事项。10月19日社区专职工作人员招聘资格复核须本人到场；消费者权益保护宣传材料项目的EMS报价期间也在本日结束，具体截止小时及寄出或签收口径需先确认。
+本期未发现新增公告。以上仅限本期已核实的官方信息。另补充4条此前公告，并保留2条持续关注事项。万顷沙镇DW0501–DW0509规划草案征询意见于10月19日结束，网上留言截至当日24:00，信函按末日邮戳判断。10月19日社区专职工作人员招聘资格复核须本人到场；消费者权益保护宣传材料项目的EMS报价期间也在本日结束，具体截止小时及寄出或签收口径需先确认。
 
 <div class="briefing-priorities">
 
 <a href="#2026年10月19日0900120014001600"><span>2026年10月19日</span><strong>社区招聘资格复核</strong></a>
-<a href="#2026年10月19日"><span>2026年10月19日</span><strong>宣传材料项目报价期间结束</strong></a>
+<a href="#2026年10月19日2400网上留言"><span>2026年10月19日24:00</span><strong>万顷沙规划草案网上意见截止</strong></a>
 
 </div>
 
@@ -38,7 +40,7 @@ sample: false
 <a href="#其他" class="is-empty">其他 <span>0</span></a>
 </nav>
 
-合计0条新增；近期公告5条（补充收录3条、持续关注2条），办理及期限提醒涉及4项去重事项，其中2项为起算条件需注意的相对期限。
+合计0条新增；近期公告6条（补充收录4条、持续关注2条），办理及期限提醒涉及5项去重事项，其中2项为起算条件需注意的相对期限。
 
 </section>
 
@@ -106,6 +108,16 @@ sample: false
 
    [官方原文](https://www.gzns.gov.cn/zwgk/zdlyxxgk/ssnyd/content/post_11008803.html)
 
+4. **南沙区万顷沙镇(DW0501-DW0509规划管理单元)控制性详细规划修编草案征询意见公示**（补充收录，不计本期新增；官方发布日期及正文落款：2026-09-20；发布机关：广州市规划和自然资源局南沙区分局）
+
+   草案向公众征询意见，公示期为2026年9月20日至10月19日，共30天。规划范围北至十一涌、南至十四涌、西至南沙港快速、东至龙穴南水道，总面积965.76公顷；公示图为示意，方案以最终审批为准，不能视作已获最终批准。
+
+   意见可按原公告指引在市规划和自然资源局对应公示页面留言，或邮寄至广州市南沙区凤凰大道1号、广州市规划和自然资源局南沙区分局（邮编511455）。公示图明确：网上反馈意见发表时间不得超过10月19日24:00；信函邮戳日不得超过10月19日。应提供真实姓名、联系电话和联系地址，信息不完整的意见按公告不予采纳。上述网上留言时限不据此套用于电子邮件。
+
+   电子邮箱存在来源差异：网页正文为GZNSGG@163.com，公示图为GZNSGH@126.com，采用邮件前应向发布机关确认；可优先按两处共同列明的网页留言或邮寄渠道反馈。
+
+   [官方原文](https://www.gzns.gov.cn/zwgk/rdzt/zzyyzq/ghjh/content/post_11012021.html) · [官方公示图](https://www.gzns.gov.cn/attachment/8/8076/8076512/11012021.jpg)
+
 ### 此前已发布，不计本期新增
 
 1. **2026年南沙区社区专职工作人员招聘笔试成绩查询、资格复核及面试通知**（官方发布日期：2026-10-15；发布机关：中共广州市南沙区委社会工作部）
@@ -124,7 +136,7 @@ sample: false
 
 ## 办理与截止提醒
 
-以下涉及4项去重事项，均为旧公告，不计本期新增。相对期限不代表已确认仍在受理，办理前请核实起算条件。
+以下涉及5项去重事项，均为旧公告，不计本期新增。相对期限不代表已确认仍在受理，办理前请核实起算条件。
 
 <div class="briefing-deadlines">
 
@@ -151,6 +163,20 @@ sample: false
 **广州市南沙区市场监督管理局消费者权益保护宣传材料制作项目询价公告**
 
 报价材料通过EMS邮寄，原文窗口10月15日至19日；未说明截止小时，也未明确按寄出或送达认定。地址凯翔路3号市场综合服务大楼5楼510室，价格监督与反不正当竞争科。限价3.35万元，宣传活动不少于10场，合同签订后至11月16日内提交材料并通过验收。境内能独立承担民事责任主体，有专业能力及同类政府宣传案例，并符合政府采购法第二十二条条件。低于限价70%需说明；综合评分，不是最低价中标。提交盖章资质、方案、报价、简介、同类合同等材料。 咨询：020-84986382 [官方依据](https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11046685.html)
+
+</div>
+
+</section>
+
+<section class="briefing-deadline">
+
+### 2026年10月19日24:00（网上留言）
+
+<div>
+
+**万顷沙镇DW0501–DW0509规划草案征询意见**（1项）
+
+公示期为9月20日至10月19日。网上留言须在10月19日24:00前发表；信函以不晚于10月19日的邮戳为准，寄至南沙区凤凰大道1号、广州市规划和自然资源局南沙区分局，邮编511455。反馈须有真实姓名、联系电话及联系地址。网页与公示图的电子邮箱不一致，邮件渠道及其截止口径需向发布机关确认，不能直接套用网上留言时限。公示草案不代表最终批准方案。 [官方依据](https://www.gzns.gov.cn/zwgk/rdzt/zzyyzq/ghjh/content/post_11012021.html) · [期限及渠道说明（公示图）](https://www.gzns.gov.cn/attachment/8/8076/8076512/11012021.jpg)
 
 </div>
 
@@ -213,5 +239,5 @@ sample: false
 </section>
 
 <!-- nansha-report-metadata
-{"version": 1, "report_date": "2026-10-19", "timezone": "Asia/Shanghai", "previous_report": "https://1610161.xyz/writing/nansha-morning-2026-10-18/", "target_window_start": "2026-10-18T07:06:44+08:00", "target_window_end": "2026-10-19T07:05:07+08:00", "generated_at": "2026-10-19T07:05:07+08:00", "new_count": 0, "categories": {"政策及涉企": 0, "土地规划及建设": 0, "招投标及采购": 0, "民生招聘及公共服务": 0, "其他": 0}, "review_count": 5, "reminder_unique_items": 4, "articles": [{"url": "https://www.gzns.gov.cn/zfxxgkml/gzsnsqscjdglj/qt/content/post_11037452.html", "publication_date": "2026-10-12", "title": "关于对未落实《特种设备使用单位落实使用安全主体责任监督管理规定》单位的通报", "key_facts": "区市场监管局通报，广州市联安物业管理有限公司作为大岗翡翠蓝湾花园61台电梯的使用单位，所任命的电梯安全总监未取得规定资格证书；决定责令改正，并给予通报批评。文中5000元至5万元为拒不改正时的法定罚款范围，并非本次已处金额。"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/ssnyd/content/post_11035241.html", "publication_date": "2026-10-10", "title": "东涌镇人民政府关于黄沛强设施农业用地情况的公示", "key_facts": "公示黄沛强拟定、经马克村协商确定的设施农业用地协议及相关资料。如有异议，公告要求自公示之日起10个工作日内向东涌镇农业农村办提出。"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/ssnyd/content/post_11008803.html", "publication_date": "2026-10-10", "title": "东涌镇人民政府关于黄世荣设施农业用地情况的公示", "key_facts": "公示黄世荣拟定、经东深村协商确定的设施农业用地协议及相关资料。异议应自公示之日起10个工作日内向镇农业农村办提出。页面发布日期为10月10日，正文落款为9月17日，起算口径需向发布机关核实，不能断言目前仍在异议期。"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/jycy/zpxx/content/post_11049284.html", "publication_date": "2026-10-15", "title": "2026年南沙区社区专职工作人员招聘笔试成绩查询、资格复核及面试通知", "key_facts": "按岗位人数1:5笔试成绩顺序进入复核；须本人到场。携签字报名表、身份证/临时身份证、户口本、非广州户籍有效居住证、毕业证和学信网鉴定；按情况提供职住一致证明，B岗另需劳动合同、社保、单位同意报考证明及社区工作者档案参考附件。材料原件及复印件各1份。未按时或未通过复核不能面试；合格现场领取面试通知书，具体面试时间按该通知书。"}, {"url": "https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11046685.html", "publication_date": "2026-10-15", "title": "广州市南沙区市场监督管理局消费者权益保护宣传材料制作项目询价公告", "key_facts": "报价材料通过EMS邮寄，原文窗口10月15日至19日；未说明截止小时，也未明确按寄出或送达认定。地址凯翔路3号市场综合服务大楼5楼510室，价格监督与反不正当竞争科。限价3.35万元，宣传活动不少于10场，合同签订后至11月16日内提交材料并通过验收。境内能独立承担民事责任主体，有专业能力及同类政府宣传案例，并符合政府采购法第二十二条条件。低于限价70%需说明；综合评分，不是最低价中标。提交盖章资质、方案、报价、简介、同类合同等材料。"}], "coverage_complete": false, "source_checks": [{"url": "https://www.gzns.gov.cn/zwgk/tzgg/", "pages": [1, 2], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/ztbxx/index.html", "pages": [1, 2], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/tzns/tzdt/tzgg/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/qzfxxgkml/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/jycy/zpxx/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/rsxx/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/nszfgb/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zcwjjjd/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zcwjjjd/zcwj/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zcwjjjd/zcdx/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/ssnyd/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/zdcq/ysnfa/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/fyws/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/jsxmpzss/pzjgxx/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}], "uncovered_ranges": ["部分部门、镇街2026年10月18日至19日目录及分页", "设施农业公示附件、招聘复核名单及部分采购附件"], "report_body_sha256": "f6b928027927ce47cf00118f0cab3148375a7bce569f08fc2ffb9117aaa399e6"}
+{"version": 2, "report_date": "2026-10-19", "timezone": "Asia/Shanghai", "previous_report": "https://1610161.xyz/writing/nansha-morning-2026-10-18/", "target_window_start": "2026-10-18T07:06:44+08:00", "target_window_end": "2026-10-19T07:05:07+08:00", "generated_at": "2026-10-19T07:05:07+08:00", "new_count": 0, "categories": {"政策及涉企": 0, "土地规划及建设": 0, "招投标及采购": 0, "民生招聘及公共服务": 0, "其他": 0}, "review_count": 6, "reminder_unique_items": 5, "articles": [{"url": "https://www.gzns.gov.cn/zfxxgkml/gzsnsqscjdglj/qt/content/post_11037452.html", "publication_date": "2026-10-12", "title": "关于对未落实《特种设备使用单位落实使用安全主体责任监督管理规定》单位的通报", "key_facts": "区市场监管局通报，广州市联安物业管理有限公司作为大岗翡翠蓝湾花园61台电梯的使用单位，所任命的电梯安全总监未取得规定资格证书；决定责令改正，并给予通报批评。文中5000元至5万元为拒不改正时的法定罚款范围，并非本次已处金额。"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/ssnyd/content/post_11035241.html", "publication_date": "2026-10-10", "title": "东涌镇人民政府关于黄沛强设施农业用地情况的公示", "key_facts": "公示黄沛强拟定、经马克村协商确定的设施农业用地协议及相关资料。如有异议，公告要求自公示之日起10个工作日内向东涌镇农业农村办提出。"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/ssnyd/content/post_11008803.html", "publication_date": "2026-10-10", "title": "东涌镇人民政府关于黄世荣设施农业用地情况的公示", "key_facts": "公示黄世荣拟定、经东深村协商确定的设施农业用地协议及相关资料。异议应自公示之日起10个工作日内向镇农业农村办提出。页面发布日期为10月10日，正文落款为9月17日，起算口径需向发布机关核实，不能断言目前仍在异议期。"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/jycy/zpxx/content/post_11049284.html", "publication_date": "2026-10-15", "title": "2026年南沙区社区专职工作人员招聘笔试成绩查询、资格复核及面试通知", "key_facts": "按岗位人数1:5笔试成绩顺序进入复核；须本人到场。携签字报名表、身份证/临时身份证、户口本、非广州户籍有效居住证、毕业证和学信网鉴定；按情况提供职住一致证明，B岗另需劳动合同、社保、单位同意报考证明及社区工作者档案参考附件。材料原件及复印件各1份。未按时或未通过复核不能面试；合格现场领取面试通知书，具体面试时间按该通知书。"}, {"url": "https://www.gzns.gov.cn/zwgk/ztbxx/content/post_11046685.html", "publication_date": "2026-10-15", "title": "广州市南沙区市场监督管理局消费者权益保护宣传材料制作项目询价公告", "key_facts": "报价材料通过EMS邮寄，原文窗口10月15日至19日；未说明截止小时，也未明确按寄出或送达认定。地址凯翔路3号市场综合服务大楼5楼510室，价格监督与反不正当竞争科。限价3.35万元，宣传活动不少于10场，合同签订后至11月16日内提交材料并通过验收。境内能独立承担民事责任主体，有专业能力及同类政府宣传案例，并符合政府采购法第二十二条条件。低于限价70%需说明；综合评分，不是最低价中标。提交盖章资质、方案、报价、简介、同类合同等材料。"}, {"url": "https://www.gzns.gov.cn/zwgk/rdzt/zzyyzq/ghjh/content/post_11012021.html", "publication_date": "2026-09-20", "title": "南沙区万顷沙镇(DW0501-DW0509规划管理单元)控制性详细规划修编草案征询意见公示", "key_facts": "规划面积965.76公顷，北十一涌、南十四涌、西南沙港快速、东龙穴南水道；咨询9月20日至10月19日；网上留言末日24:00、信函末日邮戳；网页与图示邮箱不同，需确认；草案非最终审批方案。", "attachment_url": "https://www.gzns.gov.cn/attachment/8/8076/8076512/11012021.jpg"}], "coverage_complete": false, "source_checks": [{"url": "https://www.gzns.gov.cn/zwgk/tzgg/", "pages": [1, 2], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/ztbxx/index.html", "pages": [1, 2], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/tzns/tzdt/tzgg/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/qzfxxgkml/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/jycy/zpxx/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/rsxx/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/nszfgb/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zcwjjjd/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zcwjjjd/zcwj/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zcwjjjd/zcdx/index.html", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/ssnyd/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/zdcq/ysnfa/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/fyws/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/jsxmpzss/pzjgxx/", "pages": [1], "last_successful_check": "2026-10-19T07:05:07+08:00"}, {"url": "https://www.gzns.gov.cn/zwgk/rdzt/zzyyzq/ghjh/content/post_11012021.html", "attachment_url": "https://www.gzns.gov.cn/attachment/8/8076/8076512/11012021.jpg", "last_successful_check": "2026-10-19T14:06:05+08:00"}], "uncovered_ranges": ["部分部门、镇街2026年10月18日至19日目录及分页", "设施农业公示附件、招聘复核名单及部分采购附件"], "report_body_sha256": "2b48da9c227ceadf0848d81f84191039d39457fef50586d7837885ae27c7d252", "revised_at": "2026-10-19T14:06:05+08:00"}
 -->
