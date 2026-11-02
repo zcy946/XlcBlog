@@ -12,21 +12,25 @@
 6. **其他公告与补充**：非时限类背景可合并概括，链接到网页中的完整清单。未核实内容的状态直接写在摘要中。
 7. **完整早报与阅读提示**：保留来源边界与非官方发布说明。
 
-邮件是一份经过整理的速览，办理与截止信息须完整保留。已核实内容、仅核实标题的条目及近期补充应明确区分。日期相对于本期报告固定，不在打开邮件时重新计算。
+邮件是一份经过整理的速览。正常体积下保留全部提醒；超限时仅对截止事项模块进行有提示的精选，博客仍保留完整内容。已核实内容、仅核实标题的条目及近期补充应明确区分。日期相对于本期报告固定，不在打开邮件时重新计算。
 
 ## 截止内容的保留规则
 
-- 检查早报的所有章节，包括近期补充；凡出现申报、报名、购文件、到账、提交响应、意见反馈、公示或送达期限，必须在邮件中直接展开，不能只留下“详见全文”。
+- 先检查早报所有章节（包括近期补充），整理完整候选。凡被选入邮件的申报、报名、购文件、到账、提交响应、意见反馈、公示或送达事项，必须完整展开其期限及条件。未选入的完整事项以明确提示引导读者查看博客，不逐句截断。
 - 保留具体日期、时刻、受理时段、适用对象、需完成的动作、前置条件、材料要求，以及原文已有的受理地址、邮箱、电话和官方链接。原文未明确或尚未核实的内容照实标注。
 - 同一事项的不同节点分别列出，并保留彼此的前置关系；“购买文件截止”和“响应文件截止”不能合并为一个日期。同一时刻的不同事项也不能混为一个摘要。
 - 相对期限保留公告期间、送达规则和送达后的办理期间。日期来源不一致或适用起算条件未确认时，不自行换算绝对截止日，也不将已确认的期限套用到仅核实标题的公告。
 - 事项总数按事项去重，不按节点数计数。10/15 邮件的11项提醒为原文8项办理提醒，加近期补充中的775、954、955号三条相对期限公告；新收录9条、近期补充22条的统计口径保持不变。
-- 如邮件超过体积上限，先压缩非时限类背景或拆分邮件；不能通过删掉截止信息来缩短邮件。生成脚本不会截断提醒内容。
+- HTML 必须严格小于 90 KiB。默认仅在完整邮件达到或超过上限时，按完整事项精选 `today`、`upcoming`、`relativeDeadlines`；不自动拆邮件，不修改博客、B站、新公告、补充公告或阅读限制。
+- 选择顺序为当日事项优先，其次编辑明确给出的 `priority`（0—3，越大越优先），再按最近的明确日期排序，同序保持输入顺序。`deadlineDate` 可填写已核实的 `YYYY-MM-DD`；缺省时只识别 `when` 中明确的“YYYY年M月D日”，忽略早于报告日的日期，不换算相对期限。无法确定日期的事项不伪造紧急程度，排序在明确日期之后。
+- 同一事项使用相同 `itemId`，跨区块所有节点一同保留或省略，选择时以该事项最近节点排序。未提供时用标题与第一条来源 URL 联合识别；生成方必须复核标识，不能把同名不同案件合并，或因转载链接不同将同一事项重复计数。
+- 渲染结果会在概览明确提示精选/省略事项数及完整博客链接；顶部三项统计仍是博客完整口径，不是邮件展示数。所有被选事项的摘要、条件、节点、来源原样保留；生成方仍需逐项核实优先级、相对期限和当前有效性。
+- 若省略全部截止事项后其他内容仍不小于上限，则停止生成，不截断新公告或重要条件。可用 `{ curateDeadlines: false }` 禁止自动精选，此时超限直接报错。
 
 ## 文件与生成
 
 - [briefing.html](briefing.html)：邮件 HTML 外壳，`{{变量}}` 由渲染脚本填充。
-- [render-briefing-email.mjs](../../scripts/render-briefing-email.mjs)：生成 HTML 和纯文本；也导出 `renderBriefingEmail(data)`，返回 `{ subject, html, text, bytes }`。
+- [render-briefing-email.mjs](../../scripts/render-briefing-email.mjs)：生成 HTML 和纯文本；也导出 `renderBriefingEmail(data)`，返回 `{ subject, html, text, bytes }`；发生精选时另含 `deadlineSelection`，记录总事项数、保留/省略数、对应标识及原始字节数。CLI 同时写出 `.selection.json` 供审计；未精选时写入 `null`，防止复用同名输出时遗留旧选择记录。
 - [10/15 数据](../../examples/email/nansha-morning-2026-10-15.json)：按原文整理的示例摘要。
 - [10/15 邮件](../../examples/email/nansha-morning-2026-10-15.html) / [纯文本](../../examples/email/nansha-morning-2026-10-15.txt)：可直接打开的生成结果。
 
@@ -43,8 +47,8 @@ npm run email:render -- examples/email/nansha-morning-2026-10-15.json
 | `subject` / `preheader` | 邮件主题 / 收件箱预览文字 |
 | `title` / `date` / `intro` | 正文标题、`YYYY-MM-DD` 日期与收录范围 |
 | `webUrl` | 完整早报的绝对 HTTPS 地址 |
-| `stats` | 三项计数，各含 `label` 和非负整数 `value` |
-| `today` / `upcoming` / `relativeDeadlines` | 各条包含 `when`、`title`、`summary`、`facts`、`links`；`facts` 用 `label` / `value` 保存办理要求、受理方式、前置期限等 |
+| `stats` | 三项统计，各含 `label` 和非负安全整数 `value`；明确未知时使用 JSON `null`，HTML 和纯文本均显示“待确认”，不得用 0、缺省值或字符串冒充未知 |
+| `today` / `upcoming` / `relativeDeadlines` | 各条包含 `when`、`title`、`summary`、`facts`、`links`；可选 `itemId`、`priority`、`deadlineDate` 用于整项精选；`facts` 用 `label` / `value` 保存办理要求、受理方式、前置期限等 |
 | `stories` | 各条包含 `category`、`title`、`summary`、`facts`、`links`；`facts` 为 `label` / `value` 数组 |
 | `briefs` | 各组包含 `title`、`summary`、`links` |
 | `notes` | 阅读提示文本数组 |
@@ -57,7 +61,7 @@ npm run email:render -- examples/email/nansha-morning-2026-10-15.json
 - 使用展示用表格、内联颜色和字号；核心排版不依赖 Grid、Flex、CSS 变量或外部样式表。布局表格标记 `role="presentation"`，保留标题层级。
 - 无脚本、折叠内容、动画、外部图片、字体下载或追踪像素。所有信息直接展开，链接打开原公告或博客全文。
 - 浅色内联样式作为基础；客户端支持 `prefers-color-scheme` 时使用深色增强。QQ / 网易不同版本可能自行反色或移除媒体查询，不能保证与网页逐像素一致。
-- 脚本将 HTML 控制在 90 KiB 内，为后续发送服务改写链接等预留空间。超过上限时停止生成并提示调整内容，不自动裁剪截止信息。
+- 脚本将 HTML 控制在 90 KiB 内，为后续发送服务改写链接等预留空间。达到或超过上限时执行上述整项精选；无法保留其他必要章节时停止生成。
 
 表格布局、内联样式与纯文本备份参考 [Mailchimp 的 HTML 邮件指南](https://mailchimp.com/help/about-html-email/)。Gmail 支持的 CSS 与宽度查询见 [Google 官方说明](https://developers.google.com/workspace/gmail/design/css)；不同客户端不能按同一份 CSS 能力表推断。[Mailchimp 记录的 Gmail 截断阈值约为 102 KB](https://mailchimp.com/help/gmail-is-clipping-my-email/)，因此本项目采用更小的输出上限。
 
@@ -66,3 +70,7 @@ npm run email:render -- examples/email/nansha-morning-2026-10-15.json
 本次验证覆盖浏览器中的桌面、手机宽度、深色样式，以及移除 `<style>` 后的内联样式显示。浏览器预览不等于 QQ / 网易真实收件效果；首次接入发送后，应分别用实际手机 App 检查一封测试邮件的字号、换行、深色显示和链接。
 
 发送端使用渲染结果的 `subject`、`html` 和 `text`，通过邮件库或服务组成 `multipart/alternative`；HTML 应作为邮件正文，不作为附件。渲染脚本不包含收件人、发件账号、授权码或发送操作。发送服务与定时任务可在后续接入。
+
+## 回归测试
+
+运行 `node --test scripts/render-briefing-email.test.mjs`。覆盖数字和零值、未知统计、非法值拒绝、HTML/纯文本、安全转义、超限精选、同事项多节点、明确优先级、日期排序和不可缩减内容的超限失败。

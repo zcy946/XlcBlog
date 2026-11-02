@@ -7,6 +7,9 @@ const templateUrl = new URL('../templates/email/briefing.html', import.meta.url)
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const absoluteUrl = value => new URL(value).href;
 const textStyle = 'color:#292d28;font-size:16px;line-height:28px;word-wrap:break-word;';
+const MAX_BYTES = 90 * 1024;
+const reminderKeys = ['today', 'upcoming', 'relativeDeadlines'];
+const statText = value => value === null ? '待确认' : String(value);
 const mutedStyle = 'color:#70736a;font-size:13px;line-height:23px;';
 
 function requiredText(value, name) {
@@ -29,7 +32,7 @@ function validate(data) {
   if (!Array.isArray(data.stats) || data.stats.length !== 3) throw new Error('stats 需要三个计数。');
   for (const stat of data.stats) {
     requiredText(stat.label, 'stat.label');
-    if (!Number.isInteger(stat.value) || stat.value < 0) throw new Error('stat.value 必须是非负整数。');
+    if (stat.value !== null && (!Number.isSafeInteger(stat.value) || stat.value < 0)) throw new Error('stat.value 必须是非负安全整数或 null（待确认）。');
   }
   for (const key of ['today', 'stories', 'briefs', 'upcoming', 'relativeDeadlines']) {
     if (!Array.isArray(data[key])) throw new Error(`${key} 必须是数组，可为空。`);
@@ -37,6 +40,11 @@ function validate(data) {
       const name = `${key}[${index}]`;
       requiredText(item.title, `${name}.title`);
       requiredText(item.summary, `${name}.summary`);
+      if (reminderKeys.includes(key)) {
+        if (item.itemId !== undefined) requiredText(item.itemId, `${name}.itemId`);
+        if (item.priority !== undefined && (!Number.isInteger(item.priority) || item.priority < 0 || item.priority > 3)) throw new Error(`${name}.priority 必须为 0—3 的整数。`);
+        if (item.deadlineDate !== undefined && (!/^\d{4}-\d{2}-\d{2}$/.test(item.deadlineDate) || Number.isNaN(Date.parse(item.deadlineDate)) || new Date(item.deadlineDate).toISOString().slice(0, 10) !== item.deadlineDate)) throw new Error(`${name}.deadlineDate 必须为有效 YYYY-MM-DD 日期。`);
+      }
       if (['today', 'upcoming', 'relativeDeadlines'].includes(key)) requiredText(item.when, `${name}.when`);
       if (key === 'stories') requiredText(item.category, `${name}.category`);
       if (key !== 'briefs') {
@@ -101,14 +109,12 @@ function plainSection(title, items) {
 }
 
 /** 只生成邮件内容；输入均为纯文本，链接必须为绝对 HTTPS 地址。 */
-export async function renderBriefingEmail(data) {
-  validate(data);
-  const template = await readFile(templateUrl, 'utf8');
+function renderContent(data, template) {
   const dateLabel = new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', timeZone: 'Asia/Shanghai' }).format(new Date(`${data.date}T00:00:00+08:00`));
   const replacements = {
     SUBJECT: escape(data.subject), PREHEADER: escape(data.preheader), WEB_URL: escape(absoluteUrl(data.webUrl)),
     TITLE: escape(data.title), DATE: escape(data.date), DATE_LABEL: escape(dateLabel), INTRO: escape(data.intro),
-    STATS: `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-rule" style="width:100%;table-layout:fixed;border-collapse:collapse;border-top:1px solid #dedfd5;border-bottom:1px solid #dedfd5;"><tr>${data.stats.map(stat => `<td width="33%" style="width:33%;padding:14px 0;"><p class="email-accent" style="margin:0 0 2px;color:#526347;font-size:25px;line-height:34px;font-weight:500;">${stat.value}</p><p class="email-muted" style="margin:0;${mutedStyle}">${escape(stat.label)}</p></td>`).join('')}</tr></table>`,
+    STATS: `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-rule" style="width:100%;table-layout:fixed;border-collapse:collapse;border-top:1px solid #dedfd5;border-bottom:1px solid #dedfd5;"><tr>${data.stats.map(stat => `<td width="33%" style="width:33%;padding:14px 0;"><p class="email-accent" style="margin:0 0 2px;color:#526347;font-size:25px;line-height:34px;font-weight:500;">${statText(stat.value)}</p><p class="email-muted" style="margin:0;${mutedStyle}">${escape(stat.label)}</p></td>`).join('')}</tr></table>`,
     TODAY: sectionRow('当日办理提醒', remindersHtml(data.today, true)),
     STORIES: sectionRow('本期重点', storiesHtml(data.stories)),
     BRIEFS: sectionRow('其他公告与补充', briefsHtml(data.briefs)),
@@ -120,14 +126,62 @@ export async function renderBriefingEmail(data) {
     if (!(key in replacements)) throw new Error(`未知模板变量：${key}`);
     return replacements[key];
   });
-  const text = `${data.title}｜${data.date}\n${data.preheader}\n\n${data.intro}\n${data.stats.map(stat => `${stat.label} ${stat.value}`).join(' · ')}\n`
+  const text = `${data.title}｜${data.date}\n${data.preheader}\n\n${data.intro}\n${data.stats.map(stat => `${stat.label} ${statText(stat.value)}`).join(' · ')}\n`
     + plainSection('当日办理提醒', data.today) + plainSection('本期重点', data.stories)
     + plainSection('后续时间节点', data.upcoming) + plainSection('相对期限提醒', data.relativeDeadlines)
     + plainSection('其他公告与补充', data.briefs)
     + `\n阅读完整早报：${absoluteUrl(data.webUrl)}\n\n阅读提示\n${data.notes.join('\n')}\n\n本期日期 ${data.date}，所有时间均为北京时间。\n`;
   const bytes = Buffer.byteLength(html, 'utf8');
-  if (bytes > 90 * 1024) throw new Error(`邮件 HTML 为 ${bytes} 字节，超过项目的 90 KiB 上限；请压缩非时限类背景或拆分邮件，保留全部办理与截止信息。`);
   return { subject: data.subject, html, text, bytes };
+}
+
+// 仅根据明确日期排序，不把相对期限换算成绝对日期。
+function explicitDate(item, reportDate) {
+  if (item.deadlineDate) return item.deadlineDate >= reportDate ? item.deadlineDate : '9999-12-31';
+  const dates = [...item.when.matchAll(/(20\d{2})年(\d{1,2})月(\d{1,2})日/g)]
+    .map(([, y, m, d]) => `${y}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`)
+    .filter(value => value >= reportDate && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value);
+  return dates.sort()[0] || '9999-12-31';
+}
+const reminderId = item => item.itemId || JSON.stringify([item.title, item.links[0].url]);
+
+/** 未知统计用 null；只在超限时按完整事项精选提醒，不修改输入或其他章节。 */
+export async function renderBriefingEmail(data, { curateDeadlines = true } = {}) {
+  validate(data);
+  if (typeof curateDeadlines !== 'boolean') throw new Error('curateDeadlines 必须为布尔值。');
+  const template = await readFile(templateUrl, 'utf8');
+  const full = renderContent(data, template);
+  if (full.bytes < MAX_BYTES) return full;
+  if (!curateDeadlines) throw new Error(`邮件 HTML 为 ${full.bytes} 字节，须小于 90 KiB；请启用截止事项精选或调整非时限背景。`);
+  const groups = new Map();
+  for (const key of reminderKeys) for (const item of data[key]) {
+    const id = reminderId(item);
+    const old = groups.get(id);
+    const rank = { id, today: key === 'today' ? 1 : 0, priority: item.priority ?? 0, date: explicitDate(item, data.date), index: groups.size };
+    if (old) {
+      old.today = Math.max(old.today, rank.today);
+      old.priority = Math.max(old.priority, rank.priority);
+      old.date = old.date < rank.date ? old.date : rank.date;
+    } else groups.set(id, rank);
+  }
+  // 当日事项优先，其次明确编辑优先级、最近日期；同序保持输入顺序。
+  const ranked = [...groups.values()].sort((a, b) => b.today - a.today || b.priority - a.priority || a.date.localeCompare(b.date) || a.index - b.index);
+  const kept = new Set(groups.keys());
+  for (let i = ranked.length - 1; i >= 0; i--) {
+    kept.delete(ranked[i].id);
+    const omitted = groups.size - kept.size;
+    const notice = `邮件截止事项精选：本邮件保留 ${kept.size} 项、略去 ${omitted} 项提醒；概览统计仍为博客完整口径，非邮件展示数量。完整事项、全部时间节点和办理条件请前往博客查看：${data.webUrl}`;
+    const selected = { ...data, intro: `${data.intro}\n\n${notice}` };
+    for (const key of reminderKeys) selected[key] = data[key].filter(item => kept.has(reminderId(item)));
+    const email = renderContent(selected, template);
+    if (email.bytes < MAX_BYTES) return { ...email, deadlineSelection: {
+      totalItems: groups.size, includedItems: kept.size, omittedItems: omitted,
+      includedIds: ranked.filter(item => kept.has(item.id)).map(item => item.id),
+      omittedIds: ranked.filter(item => !kept.has(item.id)).map(item => item.id),
+      originalBytes: full.bytes,
+    } };
+  }
+  throw new Error('即使省略全部截止事项，邮件仍不小于 90 KiB；已停止生成，不会截断公告、条件或来源。');
 }
 
 async function main() {
@@ -142,6 +196,7 @@ async function main() {
   await mkdir(outputDirectory, { recursive: true });
   await writeFile(resolve(outputDirectory, `${stem}.html`), email.html);
   await writeFile(resolve(outputDirectory, `${stem}.txt`), email.text);
+  await writeFile(resolve(outputDirectory, `${stem}.selection.json`), JSON.stringify(email.deadlineSelection ?? null, null, 2));
   console.log(`主题：${email.subject}\nHTML：${resolve(outputDirectory, `${stem}.html`)}\n纯文本：${resolve(outputDirectory, `${stem}.txt`)}\nHTML 大小：${(email.bytes / 1024).toFixed(1)} KiB`);
 }
 
