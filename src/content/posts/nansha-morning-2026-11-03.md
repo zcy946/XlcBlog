@@ -11,6 +11,8 @@ sample: false
 
 <p class="briefing-intro">2026年11月3日，星期二。本期整理区间为2026年11月2日07:05至11月3日07:16；按官方发布日期及已核实内容整理，区间内新增总数待确认。另补充此前未收录的1条公告。以下时间均为北京时间。</p>
 
+<p class="briefing-meta">更正于<time datetime="2026-11-08T07:03:00+08:00">2026年11月8日07:03</time>：近期公告中“双十一”网络集中促销活动行政指导意见书的发布日期由11月1日更正为11月2日。具体发布时间未核实，保留原补充收录归类，不调整当期新增统计。</p>
+
 <section class="briefing-overview">
 
 ## 今日先看
@@ -1233,8 +1235,8 @@ sample: false
 以下1条为补充收录，按原官方发布日期列示，不计本期新增。
 
 1. **关于 2026 年 “双十一” 网络集中促销活动行政指导意见书**<br />
-   原发布日期：2026-11-01。发布机关：广州市南沙区市场监督管理局。补充收录：仅确认官方目录中的标题及发布日期，具体内容尚未核实。  仅确认官方目录标题及2026年11月1日发布日期，具体适用要求、条款及期限尚未核实；链接指向官方目录。<br />
-   [官方目录](https://www.gzns.gov.cn/gznsscjg/gkmlpt/index)
+   原发布日期：2026-11-02。发布机关：广州市南沙区市场监督管理局。补充收录：初稿仅确认官方目录中的标题及发布日期，具体内容当时尚未核实。此次核对官方正文及官网转载，发布日期均为2026年11月2日；本次仅订正发布日期，具体适用要求、条款及期限以官方原文为准。<br />
+   [官方原文](https://www.gzns.gov.cn/gznsscjg/gkmlpt/content/11/11081/post_11081332.html) · [官网转载](https://www.gzns.gov.cn/zwgk/rdzt/zzyyzq/zwdt/content/post_11081334.html) · [官方目录](https://www.gzns.gov.cn/gznsscjg/gkmlpt/index)
 
 </section>
 
@@ -6971,7 +6973,7 @@ sample: false
   "previous_report": "https://1610161.xyz/writing/nansha-morning-2026-11-02/",
   "effective_collection_watermark": "2026-11-01T07:06:54+08:00",
   "new_information_status": "待确认",
-  "report_body_sha256": "3a508e6fa9964550f7ff018e48a4a0e0831a0c93e93468ca141ddd34c8464e93",
+  "report_body_sha256": "fc4d457c1541ed2b7aee27e52f03479f816b92ec33353eb7f6432433842508fd",
   "sources": [
     {
       "url": "https://www.gzns.gov.cn/gznsczgz/gkmlpt/content/11/11080/post_11080896.html",
@@ -7212,10 +7214,11 @@ sample: false
       "summary": "行政审批局拟对广州宏锦贸易有限公司作出不予撤销商事登记决定，现公告送达告知书。公告发布之日起经过30日视为送达；本次为告知阶段，不是最终决定。"
     },
     {
-      "url": "https://www.gzns.gov.cn/gznsscjg/gkmlpt/index",
-      "date": "2026-11-01",
-      "checked_at": "2026-11-02T23:07:06.422Z",
-      "summary": "补充收录：仅确认官方目录中的标题及发布日期，具体内容尚未核实。"
+      "url": "https://www.gzns.gov.cn/gznsscjg/gkmlpt/content/11/11081/post_11081332.html",
+      "date": "2026-11-02",
+      "checked_at": "2026-11-08T07:03:00+08:00",
+      "summary": "补充收录：发布日期已根据官方正文及官网转载订正为2026-11-02；本次仅订正日期，保留原补充收录归类。",
+      "corroborating_url": "https://www.gzns.gov.cn/zwgk/rdzt/zzyyzq/zwdt/content/post_11081334.html"
     }
   ],
   "continuing_sources": [
@@ -8045,6 +8048,7 @@ sample: false
       "report_date": "2026-11-03",
       "scope": "正文"
     }
-  ]
+  ],
+  "updated_at": "2026-11-08T07:03:00+08:00"
 }
 -->
